@@ -151,4 +151,6 @@ pub fn build(b: *std.Build) void {
     //
     // Lastly, the Zig build system is relatively simple and self-contained,
     // and reading its source code will allow you to master it.
+    const cli_dep = b.dependency("cli", .{});
+    exe.root_module.addImport("cli", cli_dep.module("cli"));
 }
