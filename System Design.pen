@@ -1,5 +1,1177 @@
 {
   "version": "2.19",
-  "children": [],
+  "children": [
+    {
+      "type": "frame",
+      "id": "v20D0",
+      "x": 0,
+      "y": 0,
+      "name": "System map · Editable architecture",
+      "clip": true,
+      "width": 1600,
+      "fill": "#F8FAFC",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": 48,
+      "children": [
+        {
+          "type": "frame",
+          "id": "Pj3PU",
+          "name": "Project introduction",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 10,
+          "children": [
+            {
+              "type": "text",
+              "id": "CwpIX",
+              "name": "SYSTEM DESIGN WORKBOOK     /     01",
+              "fill": "#0066FF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "SYSTEM MAP / [PROJECT NAME]",
+              "fontFamily": "IBM Plex Mono",
+              "fontSize": 12,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "n25Y5O",
+              "name": "Project name",
+              "fill": "#1A1A1A",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "How the system works",
+              "fontFamily": "Geist",
+              "fontSize": 36,
+              "fontWeight": "600",
+              "letterSpacing": -1
+            },
+            {
+              "type": "text",
+              "id": "wCSGp",
+              "name": "Project summary",
+              "fill": "#666666",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Starter architecture · Rename the blocks, change the connections, remove what you don’t need.",
+              "fontFamily": "Geist",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DpmO9",
+          "name": "Connected architecture diagram",
+          "width": "fill_container",
+          "height": 720,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "stroke": "#DDE4ED",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "ngmaR",
+              "x": 32,
+              "y": 24,
+              "name": "Architecture heading",
+              "fill": "#2563EB",
+              "textGrowth": "fixed-width",
+              "width": 800,
+              "content": "01  /  COMPONENTS & CONNECTIONS",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "TACCU",
+              "x": 32,
+              "y": 58,
+              "name": "Architecture legend",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 1300,
+              "content": "Blue → request / data     Purple → background work     Replies return along the same path",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "kb7px",
+              "x": 40,
+              "y": 280,
+              "name": "Client",
+              "width": 236,
+              "height": 120,
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wLuD5",
+                  "name": "Client heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "TamXW",
+                      "name": "Client icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "monitor",
+                      "library": "lucide",
+                      "fill": "#2563EB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XPawm",
+                      "name": "Client label",
+                      "fill": "#17243B",
+                      "content": "Client",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "aLXUr",
+                  "name": "Client responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "User starts an action\nWeb app / mobile app",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "f12YMe",
+              "x": 376,
+              "y": 280,
+              "name": "API gateway",
+              "width": 236,
+              "height": 120,
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Z05Gav",
+                  "name": "API gateway heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "W0hLD",
+                      "name": "API gateway icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "shield-check",
+                      "library": "lucide",
+                      "fill": "#2563EB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VEzVh",
+                      "name": "API gateway label",
+                      "fill": "#17243B",
+                      "content": "API gateway",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "v00nKM",
+                  "name": "API gateway responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Authenticate the caller\nRoute the request",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "r29Xfm",
+              "x": 712,
+              "y": 280,
+              "name": "App service",
+              "width": 236,
+              "height": 120,
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "S6BVCW",
+                  "name": "App service heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "KhkIo",
+                      "name": "App service icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "server",
+                      "library": "lucide",
+                      "fill": "#2563EB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QNBjD",
+                      "name": "App service label",
+                      "fill": "#17243B",
+                      "content": "App service",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Z4TLD",
+                  "name": "App service responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Validate input\nRun business logic",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "gvOoM",
+              "x": 1200,
+              "y": 280,
+              "name": "Database",
+              "width": 236,
+              "height": 120,
+              "fill": "#EFF6FF",
+              "cornerRadius": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Xwjti",
+                  "name": "Database heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "H9EuR",
+                      "name": "Database icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "database",
+                      "library": "lucide",
+                      "fill": "#2563EB"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UdCFR",
+                      "name": "Database label",
+                      "fill": "#17243B",
+                      "content": "Database",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Rf9GF",
+                  "name": "Database responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Store durable records\nRead and write data",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jFFYM",
+              "x": 1200,
+              "y": 110,
+              "name": "Cache · optional",
+              "width": 236,
+              "height": 120,
+              "fill": "#F8FAFC",
+              "cornerRadius": 8,
+              "stroke": "#64748B",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Xcu42",
+                  "name": "Cache · optional heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "N4Ycpt",
+                      "name": "Cache · optional icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "zap",
+                      "library": "lucide",
+                      "fill": "#64748B"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ork0S",
+                      "name": "Cache · optional label",
+                      "fill": "#17243B",
+                      "content": "Cache · optional",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Ytziz",
+                  "name": "Cache · optional responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Reuse frequent results\nExpire stale entries",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Rjo0u",
+              "x": 712,
+              "y": 538,
+              "name": "Job queue · optional",
+              "width": 236,
+              "height": 120,
+              "fill": "#F5F3FF",
+              "cornerRadius": 8,
+              "stroke": "#7C3AED",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "b8r2wH",
+                  "name": "Job queue · optional heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "cFwju",
+                      "name": "Job queue · optional icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "list-ordered",
+                      "library": "lucide",
+                      "fill": "#7C3AED"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nZOE6",
+                      "name": "Job queue · optional label",
+                      "fill": "#17243B",
+                      "content": "Job queue · optional",
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "J5503Y",
+                  "name": "Job queue · optional responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Buffer slow tasks\nRetry failed deliveries",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "VMfGF",
+              "x": 1200,
+              "y": 538,
+              "name": "Worker · optional",
+              "width": 236,
+              "height": 120,
+              "fill": "#F5F3FF",
+              "cornerRadius": 8,
+              "stroke": "#7C3AED",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EJF5d",
+                  "name": "Worker · optional heading",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "tIfQP",
+                      "name": "Worker · optional icon",
+                      "width": 22,
+                      "height": 22,
+                      "icon": "cog",
+                      "library": "lucide",
+                      "fill": "#7C3AED"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jOe00",
+                      "name": "Worker · optional label",
+                      "fill": "#17243B",
+                      "content": "Worker · optional",
+                      "fontFamily": "Geist",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "jCF4p",
+                  "name": "Worker · optional responsibility",
+                  "fill": "#53637A",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Process jobs asynchronously\nSave results to the database",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "oHYBh",
+              "x": 276,
+              "y": 336,
+              "name": "Client to gateway",
+              "geometry": "M0 4l100 0m-8-4l8 4-8 4",
+              "viewBox": [
+                0,
+                0,
+                100,
+                8
+              ],
+              "width": 100,
+              "height": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "zEkNv",
+              "x": 290,
+              "y": 305,
+              "name": "HTTPS label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 80,
+              "content": "HTTPS",
+              "fontFamily": "Geist",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "puESQ",
+              "x": 612,
+              "y": 336,
+              "name": "Gateway to app",
+              "geometry": "M0 4l100 0m-8-4l8 4-8 4",
+              "viewBox": [
+                0,
+                0,
+                100,
+                8
+              ],
+              "width": 100,
+              "height": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "katn7",
+              "x": 632,
+              "y": 305,
+              "name": "Route label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 80,
+              "content": "Route",
+              "fontFamily": "Geist",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "f60xo",
+              "x": 948,
+              "y": 336,
+              "name": "App to database",
+              "geometry": "M0 4l252 0m-8-4l8 4-8 4",
+              "viewBox": [
+                0,
+                0,
+                252,
+                8
+              ],
+              "width": 252,
+              "height": 8,
+              "stroke": "#2563EB",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "eUkkX",
+              "x": 1010,
+              "y": 305,
+              "name": "DB connection label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 180,
+              "content": "Read / write",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "g7fTH",
+              "x": 948,
+              "y": 166,
+              "name": "App to cache",
+              "geometry": "M0 145l100 0 0-141 152 0m-8-4l8 4-8 4",
+              "viewBox": [
+                0,
+                0,
+                252,
+                145
+              ],
+              "width": 252,
+              "height": 145,
+              "stroke": "#2563EB",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "X8Bix",
+              "x": 1020,
+              "y": 135,
+              "name": "Cache connection label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 160,
+              "content": "Check / populate",
+              "fontFamily": "Geist",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "f9Pkd5",
+              "x": 826,
+              "y": 400,
+              "name": "App publishes job",
+              "geometry": "M4 0l0 138m-4-8l4 8 4-8",
+              "viewBox": [
+                0,
+                0,
+                8,
+                138
+              ],
+              "width": 8,
+              "height": 138,
+              "stroke": "#7C3AED",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "Zgw9I",
+              "x": 848,
+              "y": 464,
+              "name": "Enqueue label",
+              "fill": "#7C3AED",
+              "textGrowth": "fixed-width",
+              "width": 210,
+              "content": "Enqueue slow task",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "q7oiY0",
+              "x": 948,
+              "y": 594,
+              "name": "Queue to worker",
+              "geometry": "M0 4l252 0m-8-4l8 4-8 4",
+              "viewBox": [
+                0,
+                0,
+                252,
+                8
+              ],
+              "width": 252,
+              "height": 8,
+              "stroke": "#7C3AED",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "hICQR",
+              "x": 1018,
+              "y": 564,
+              "name": "Consume label",
+              "fill": "#7C3AED",
+              "textGrowth": "fixed-width",
+              "width": 160,
+              "content": "Consume job",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "a54I0r",
+              "x": 1314,
+              "y": 400,
+              "name": "Worker persists result",
+              "geometry": "M4 138l0-138m-4 8l4-8 4 8",
+              "viewBox": [
+                0,
+                0,
+                8,
+                138
+              ],
+              "width": 8,
+              "height": 138,
+              "stroke": "#7C3AED",
+              "strokeWidth": 2,
+              "strokeLinejoin": "round",
+              "strokeLinecap": "round"
+            },
+            {
+              "type": "text",
+              "id": "JTpT9",
+              "x": 1338,
+              "y": 464,
+              "name": "Persist label",
+              "fill": "#7C3AED",
+              "textGrowth": "fixed-width",
+              "width": 140,
+              "content": "Save result",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "MVpUs",
+              "x": 40,
+              "y": 480,
+              "name": "Core path note",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 520,
+              "content": "CORE PATH\nStart with these four blocks. Add the optional branches only when needed.",
+              "fontFamily": "Geist",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "J0wx63",
+          "name": "Request lifecycle · Sequence diagram",
+          "width": "fill_container",
+          "height": 550,
+          "fill": "#FFFFFF",
+          "cornerRadius": 12,
+          "stroke": "#DDE4ED",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "o7Xyev",
+              "x": 32,
+              "y": 24,
+              "name": "Sequence title",
+              "fill": "#2563EB",
+              "textGrowth": "fixed-width",
+              "width": 900,
+              "content": "02  /  ONE REQUEST, STEP BY STEP",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "oTYEq",
+              "x": 32,
+              "y": 54,
+              "name": "Sequence instruction",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 1100,
+              "content": "Example: a user saves a record. Time moves downward.",
+              "fontFamily": "Geist",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "W9wg0C",
+              "x": 50,
+              "y": 100,
+              "name": "Client lane",
+              "width": 200,
+              "height": 44,
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "swGME",
+                  "name": "Participant label",
+                  "fill": "#17243B",
+                  "content": "Client",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "oLSv6",
+              "x": 149,
+              "y": 144,
+              "name": "Lifeline",
+              "fill": "#E2E8F0",
+              "width": 2,
+              "height": 350
+            },
+            {
+              "type": "frame",
+              "id": "tg1sZ",
+              "x": 450,
+              "y": 100,
+              "name": "Gateway lane",
+              "width": 200,
+              "height": 44,
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZuOCx",
+                  "name": "Participant label",
+                  "fill": "#17243B",
+                  "content": "API gateway",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "v68zW",
+              "x": 549,
+              "y": 144,
+              "name": "Lifeline",
+              "fill": "#E2E8F0",
+              "width": 2,
+              "height": 350
+            },
+            {
+              "type": "frame",
+              "id": "ah1nF",
+              "x": 850,
+              "y": 100,
+              "name": "App lane",
+              "width": 200,
+              "height": 44,
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SYIKa",
+                  "name": "Participant label",
+                  "fill": "#17243B",
+                  "content": "App service",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "xMEOX",
+              "x": 949,
+              "y": 144,
+              "name": "Lifeline",
+              "fill": "#E2E8F0",
+              "width": 2,
+              "height": 350
+            },
+            {
+              "type": "frame",
+              "id": "Wwppn",
+              "x": 1250,
+              "y": 100,
+              "name": "Database lane",
+              "width": 200,
+              "height": 44,
+              "fill": "#EFF6FF",
+              "cornerRadius": 6,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "D0RlIp",
+                  "name": "Participant label",
+                  "fill": "#17243B",
+                  "content": "Database",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "Sxm1V",
+              "x": 1349,
+              "y": 144,
+              "name": "Lifeline",
+              "fill": "#E2E8F0",
+              "width": 2,
+              "height": 350
+            },
+            {
+              "type": "path",
+              "id": "Ovgzu",
+              "x": 150,
+              "y": 195,
+              "name": "User submits",
+              "geometry": "M0 5l400 0m-9-5l9 5-9 5",
+              "viewBox": [
+                0,
+                0,
+                400,
+                10
+              ],
+              "width": 400,
+              "height": 10,
+              "stroke": "#2563EB",
+              "strokeWidth": 2
+            },
+            {
+              "type": "text",
+              "id": "pYkjg",
+              "x": 166,
+              "y": 170,
+              "name": "User submits label",
+              "fill": "#2563EB",
+              "textGrowth": "fixed-width",
+              "width": 368,
+              "content": "1. POST /records",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "uwBoF",
+              "x": 550,
+              "y": 250,
+              "name": "Gateway routes",
+              "geometry": "M0 5l400 0m-9-5l9 5-9 5",
+              "viewBox": [
+                0,
+                0,
+                400,
+                10
+              ],
+              "width": 400,
+              "height": 10,
+              "stroke": "#2563EB",
+              "strokeWidth": 2
+            },
+            {
+              "type": "text",
+              "id": "m9eA5n",
+              "x": 566,
+              "y": 225,
+              "name": "Gateway routes label",
+              "fill": "#2563EB",
+              "textGrowth": "fixed-width",
+              "width": 368,
+              "content": "2. Authenticate & forward",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "kAQwP",
+              "x": 950,
+              "y": 305,
+              "name": "App writes",
+              "geometry": "M0 5l400 0m-9-5l9 5-9 5",
+              "viewBox": [
+                0,
+                0,
+                400,
+                10
+              ],
+              "width": 400,
+              "height": 10,
+              "stroke": "#2563EB",
+              "strokeWidth": 2
+            },
+            {
+              "type": "text",
+              "id": "xS9yA",
+              "x": 966,
+              "y": 280,
+              "name": "App writes label",
+              "fill": "#2563EB",
+              "textGrowth": "fixed-width",
+              "width": 368,
+              "content": "3. Validate & insert record",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "dprRa",
+              "x": 950,
+              "y": 360,
+              "name": "Database returns",
+              "geometry": "M400 5l-400 0m9-5l-9 5 9 5",
+              "viewBox": [
+                0,
+                0,
+                400,
+                10
+              ],
+              "width": 400,
+              "height": 10,
+              "stroke": "#64748B",
+              "strokeWidth": 2
+            },
+            {
+              "type": "text",
+              "id": "pyGN7",
+              "x": 966,
+              "y": 335,
+              "name": "Database returns label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 368,
+              "content": "4. Return saved record",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "M6MVY",
+              "x": 550,
+              "y": 415,
+              "name": "App responds",
+              "geometry": "M400 5l-400 0m9-5l-9 5 9 5",
+              "viewBox": [
+                0,
+                0,
+                400,
+                10
+              ],
+              "width": 400,
+              "height": 10,
+              "stroke": "#64748B",
+              "strokeWidth": 2
+            },
+            {
+              "type": "text",
+              "id": "LIYEN",
+              "x": 566,
+              "y": 390,
+              "name": "App responds label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 368,
+              "content": "5. Return 201 + record",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "LqAga",
+              "x": 150,
+              "y": 470,
+              "name": "Client receives",
+              "geometry": "M400 5l-400 0m9-5l-9 5 9 5",
+              "viewBox": [
+                0,
+                0,
+                400,
+                10
+              ],
+              "width": 400,
+              "height": 10,
+              "stroke": "#64748B",
+              "strokeWidth": 2
+            },
+            {
+              "type": "text",
+              "id": "fdjA6",
+              "x": 166,
+              "y": 445,
+              "name": "Client receives label",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 368,
+              "content": "6. Show success",
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ZJIIy",
+              "x": 32,
+              "y": 514,
+              "name": "Error path note",
+              "fill": "#53637A",
+              "textGrowth": "fixed-width",
+              "width": 1400,
+              "content": "ERROR PATH   Invalid input → 400   ·   Unauthorized → 401   ·   Unexpected failure → 5xx",
+              "fontFamily": "Geist",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "fileToken": "95324259-300b-4677-8d81-b64578bc73bc"
 }

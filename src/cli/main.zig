@@ -5,15 +5,15 @@ const builtin = @import("builtin");
 pub fn init_cmd(init: std.process.Init) !void {
     std.debug.print("Init Command Triggered\n", .{});
 
-    const allocator = init.gpa;
-
-    try create_all_required_files(init, allocator);
+    try create_all_required_files(init);
 }
 
 /// Create all required config files for FoldRelay
-fn create_all_required_files(init: std.process.Init, allocator: std.mem.Allocator) !void {
+fn create_all_required_files(init: std.process.Init) !void {
     const io = init.io;
     const dir = std.Io.Dir;
+
+    const allocator = init.gpa;
 
     // Get the absolute path to the location of the config folder
     const home_env = if (builtin.os.tag == .windows) "USERPROFILE" else "HOME";
