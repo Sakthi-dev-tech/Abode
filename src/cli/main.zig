@@ -5,9 +5,15 @@ const builtin = @import("builtin");
 pub fn init_cmd(init: std.process.Init) !void {
     std.debug.print("Init Command Triggered\n", .{});
 
+    const allocator = init.gpa;
+
+    try create_all_required_files(init, allocator);
+}
+
+/// Create all required config files for FoldRelay
+fn create_all_required_files(init: std.process.Init, allocator: std.mem.Allocator) !void {
     const io = init.io;
     const dir = std.Io.Dir;
-    const allocator = init.gpa;
 
     // Get the absolute path to the location of the config folder
     const home_env = if (builtin.os.tag == .windows) "USERPROFILE" else "HOME";
@@ -35,26 +41,15 @@ pub fn init_cmd(init: std.process.Init) !void {
         }
     };
 
+    // Get the config_dir Dir struct
     const config_dir = try dir.openDirAbsolute(io, absolute_path, .{});
     defer config_dir.close(io);
 
-    const config_file = config_dir.createFile(io, "config.toml", .{ .read = true, .exclusive = true }) catch |err| {
-        switch (err) {
-            error.PathAlreadyExists => {
-                std.debug.print("config.toml already exists", .{});
-                return err;
-            },
-
-            error.PermissionDenied => {
-                std.debug.print("Permssion was denied!", .{});
-                return err;
-            },
-
-            else => {
-                std.debug.print("Something went wrong while creating config.toml: {}", .{err});
-                return err;
-            },
-        }
-    };
+    // Create the config.toml file
+    const config_file = try config_dir.createFile(
+        io,
+        "config.toml",
+        .{ .read = true, .truncate = false }
+        );
     defer config_file.close(io);
 }
