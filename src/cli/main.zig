@@ -5,11 +5,12 @@ const builtin = @import("builtin");
 pub fn init_cmd(init: std.process.Init) !void {
     std.debug.print("Init Command Triggered\n", .{});
 
-    try create_all_required_files(init);
+    try create_config_files(init);
+    try create_local_store_files();
 }
 
 /// Create all required config files for FoldRelay
-fn create_all_required_files(init: std.process.Init) !void {
+fn create_config_files(init: std.process.Init) !void {
     const io = init.io;
     const dir = std.Io.Dir;
 
@@ -52,4 +53,10 @@ fn create_all_required_files(init: std.process.Init) !void {
         .{ .read = true, .truncate = false }
         );
     defer config_file.close(io);
+}
+
+/// Create required folders for storing local copy of sync files
+/// This will become a git repository connected to the user's remote repository
+fn create_local_store_files() !void {
+    return;
 }
