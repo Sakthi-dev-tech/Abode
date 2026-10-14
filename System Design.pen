@@ -1777,6 +1777,4037 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "kaCGN",
+      "x": 3640,
+      "y": 0,
+      "name": "1. UML sync sequence",
+      "clip": true,
+      "width": 1800,
+      "height": 3430,
+      "fill": "#F8FAFC",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 48,
+      "children": [
+        {
+          "type": "text",
+          "id": "PQ1He",
+          "name": "Diagram eyebrow",
+          "fill": "#2563A6",
+          "content": "FOLDRELAY  /  SYSTEM DESIGN  /  01",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "PQpps",
+          "name": "Diagram title",
+          "fill": "#162638",
+          "content": "File sync · UML sequence diagram",
+          "fontFamily": "Inter",
+          "fontSize": 40,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "tVfTV",
+          "name": "Diagram scope",
+          "fill": "#536679",
+          "content": "Time flows downward. Messages carry bytes and revision metadata; guards select safe branches.",
+          "fontFamily": "Inter",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "u6tIXm",
+          "name": "UML sequence · local capture, publication, peer apply",
+          "width": "fill_container",
+          "height": 2450,
+          "fill": "#FFFFFF",
+          "stroke": "#D8E1E9",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "QEoum",
+              "x": 7,
+              "y": 24,
+              "name": "Local file participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#EAF2FA",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EXoP6",
+                  "name": "Local file name",
+                  "fill": "#233549",
+                  "content": "Local file",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "fshlo",
+                  "name": "Local file role",
+                  "fill": "#233549",
+                  "content": "Device A · filesystem",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "CKwjl",
+              "x": 100,
+              "y": 84,
+              "name": "Local file lifeline",
+              "geometry": "M110 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                100,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "frame",
+              "id": "bxsfi",
+              "x": 247,
+              "y": 24,
+              "name": "Agent A participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#EAF2FA",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "boPhw",
+                  "name": "Agent A name",
+                  "fill": "#233549",
+                  "content": "Agent A",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "AdC5w",
+                  "name": "Agent A role",
+                  "fill": "#233549",
+                  "content": "Zig sync process",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "lwNep",
+              "x": 340,
+              "y": 84,
+              "name": "Agent A lifeline",
+              "geometry": "M350 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                340,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "frame",
+              "id": "m8dfA",
+              "x": 487,
+              "y": 24,
+              "name": "SQLite A participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#EAF2FA",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "q92gKo",
+                  "name": "SQLite A name",
+                  "fill": "#233549",
+                  "content": "SQLite A",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "qeSaB",
+                  "name": "SQLite A role",
+                  "fill": "#233549",
+                  "content": "mappings + pending ops",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "a8YmR",
+              "x": 580,
+              "y": 84,
+              "name": "SQLite A lifeline",
+              "geometry": "M590 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                580,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "frame",
+              "id": "mldPD",
+              "x": 727,
+              "y": 24,
+              "name": "Sync API participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#F0EDF7",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hlIvh",
+                  "name": "Sync API name",
+                  "fill": "#233549",
+                  "content": "Sync API",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "EiLM4",
+                  "name": "Sync API role",
+                  "fill": "#233549",
+                  "content": "Railway · account scoped",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "Fr1so",
+              "x": 820,
+              "y": 84,
+              "name": "Sync API lifeline",
+              "geometry": "M830 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                820,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "frame",
+              "id": "vmjO3",
+              "x": 967,
+              "y": 24,
+              "name": "Postgres participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#F0EDF7",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P951Ox",
+                  "name": "Postgres name",
+                  "fill": "#233549",
+                  "content": "Postgres",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "kri7i",
+                  "name": "Postgres role",
+                  "fill": "#233549",
+                  "content": "files / revisions / log",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "iKFsy",
+              "x": 1060,
+              "y": 84,
+              "name": "Postgres lifeline",
+              "geometry": "M1070 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                1060,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "frame",
+              "id": "whIjY",
+              "x": 1207,
+              "y": 24,
+              "name": "R2 participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#F0EDF7",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "W2phFZ",
+                  "name": "R2 name",
+                  "fill": "#233549",
+                  "content": "R2",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "hA5Sj",
+                  "name": "R2 role",
+                  "fill": "#233549",
+                  "content": "immutable content",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "zRUZh",
+              "x": 1300,
+              "y": 84,
+              "name": "R2 lifeline",
+              "geometry": "M1310 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                1300,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "frame",
+              "id": "svJ5p",
+              "x": 1447,
+              "y": 24,
+              "name": "Device B participant",
+              "width": 206,
+              "height": 70,
+              "fill": "#EAF6EF",
+              "stroke": "#8191A2",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 5,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "j5b7N1",
+                  "name": "Device B name",
+                  "fill": "#233549",
+                  "content": "Device B",
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "wOyuD",
+                  "name": "Device B role",
+                  "fill": "#233549",
+                  "content": "agent + SQLite + filesystem",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "path",
+              "id": "hC5DD",
+              "x": 1540,
+              "y": 84,
+              "name": "Device B lifeline",
+              "geometry": "M1550 94l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6m0 6l0 6",
+              "viewBox": [
+                1540,
+                84,
+                20,
+                2331
+              ],
+              "width": 20,
+              "height": 2331,
+              "stroke": "#A7B4C2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "path",
+              "id": "d8kCi",
+              "x": 100,
+              "y": 135,
+              "name": "Filesystem event",
+              "geometry": "M110 145l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                100,
+                135,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "yefMC",
+              "x": 122,
+              "y": 106,
+              "name": "Filesystem event label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "1  Mapped file changed / explicit add",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "Yxw7E",
+              "x": 340,
+              "y": 170,
+              "name": "Stable capture",
+              "geometry": "M350 180l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                340,
+                170,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "NKqCK",
+              "x": 145,
+              "y": 174,
+              "name": "Stable capture label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 190,
+              "content": "Capture stable bytes; retry if source changes",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "auCKe",
+              "x": 235,
+              "y": 240,
+              "name": "Enrollment boundary",
+              "width": 480,
+              "height": 190,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "rectangle",
+              "id": "SKgGl",
+              "x": 235,
+              "y": 240,
+              "name": "Enrollment operator tab",
+              "fill": "#E8EDF4",
+              "width": 62,
+              "height": 25,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "HtQvb",
+              "x": 244,
+              "y": 244,
+              "name": "Enrollment operator",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 50,
+              "content": "alt",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "QrQoB",
+              "x": 311,
+              "y": 245,
+              "name": "Enrollment guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 390,
+              "content": "[new file: explicit enrollment]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "V6PFi",
+              "x": 340,
+              "y": 300,
+              "name": "New file mapping",
+              "geometry": "M350 310l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                300,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "n9rzi",
+              "x": 362,
+              "y": 271,
+              "name": "New file mapping label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "create file_id + mapping; expected = null",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "lcjLT",
+              "x": 225,
+              "y": 325,
+              "name": "Enrollment operand separator",
+              "geometry": "M235 335l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0",
+              "viewBox": [
+                225,
+                325,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#8191A2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "MbqDi",
+              "x": 251,
+              "y": 343,
+              "name": "Existing file guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 430,
+              "content": "[existing mapped file]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "caTE7",
+              "x": 340,
+              "y": 395,
+              "name": "Read existing baseline",
+              "geometry": "M350 405l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                395,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "PW6f4",
+              "x": 362,
+              "y": 366,
+              "name": "Read existing baseline label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "read file_id + baseline R10",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "sRaOJ",
+              "x": 340,
+              "y": 455,
+              "name": "Content identity",
+              "geometry": "M350 465l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                340,
+                455,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "ibYKL",
+              "x": 145,
+              "y": 459,
+              "name": "Content identity label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 190,
+              "content": "SHA-256(snapshot) → H",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "qZido",
+              "x": 340,
+              "y": 515,
+              "name": "Durable pending operation",
+              "geometry": "M350 525l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                515,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "u7av3",
+              "x": 362,
+              "y": 486,
+              "name": "Durable pending operation label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "queue op_id, H,\nexpected, snapshot",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "E65i63",
+              "x": 235,
+              "y": 560,
+              "name": "Retry publication boundary",
+              "width": 1165,
+              "height": 820,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "rectangle",
+              "id": "t2o6r",
+              "x": 235,
+              "y": 560,
+              "name": "Retry publication operator tab",
+              "fill": "#E8EDF4",
+              "width": 62,
+              "height": 25,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "qAFI4",
+              "x": 244,
+              "y": 564,
+              "name": "Retry publication operator",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 50,
+              "content": "loop",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "nB1Fe",
+              "x": 311,
+              "y": 565,
+              "name": "Retry publication guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 1075,
+              "content": "[while operation pending; retry same operation_id; acknowledgement or conflict exits]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "kyGnV",
+              "x": 340,
+              "y": 610,
+              "name": "Ensure cloud content",
+              "geometry": "M350 620l480 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                610,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "BYTjM",
+              "x": 362,
+              "y": 581,
+              "name": "Ensure cloud content label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "2  ensureContent(account, H, snapshot bytes)",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "ggyp7",
+              "x": 820,
+              "y": 665,
+              "name": "Check deduplicated content",
+              "geometry": "M830 675l480 0m-8-5l8 5-8 5",
+              "viewBox": [
+                820,
+                665,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "nImmm",
+              "x": 842,
+              "y": 636,
+              "name": "Check deduplicated content label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "HEAD account/H",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "AiLsv",
+              "x": 820,
+              "y": 715,
+              "name": "Content presence",
+              "geometry": "M1310 725l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m2-5l-8 5 8 5",
+              "viewBox": [
+                820,
+                715,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "P8FkY",
+              "x": 842,
+              "y": 686,
+              "name": "Content presence label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "present / missing",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "pFwUq",
+              "x": 755,
+              "y": 755,
+              "name": "Missing content boundary",
+              "width": 630,
+              "height": 130,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "rectangle",
+              "id": "s0Y5Dc",
+              "x": 755,
+              "y": 755,
+              "name": "Missing content operator tab",
+              "fill": "#E8EDF4",
+              "width": 62,
+              "height": 25,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "NCLJA",
+              "x": 764,
+              "y": 759,
+              "name": "Missing content operator",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 50,
+              "content": "opt",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "QkQGN",
+              "x": 831,
+              "y": 760,
+              "name": "Missing content guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 540,
+              "content": "[content missing]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "W3sh6",
+              "x": 820,
+              "y": 805,
+              "name": "Upload snapshot",
+              "geometry": "M830 815l480 0m-8-5l8 5-8 5",
+              "viewBox": [
+                820,
+                805,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "WOHpw",
+              "x": 842,
+              "y": 776,
+              "name": "Upload snapshot label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "PUT immutable bytes; verify H",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "Trlrq",
+              "x": 820,
+              "y": 855,
+              "name": "Upload confirmation",
+              "geometry": "M1310 865l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m2-5l-8 5 8 5",
+              "viewBox": [
+                820,
+                855,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "OFLY9",
+              "x": 842,
+              "y": 826,
+              "name": "Upload confirmation label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "content available",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "AVTUI",
+              "x": 340,
+              "y": 935,
+              "name": "Publish revision",
+              "geometry": "M350 945l480 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                935,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "uttmv",
+              "x": 362,
+              "y": 906,
+              "name": "Publish revision label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "3  publish(file_id, H, expected_revision, operation_id)",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "DrZ3A",
+              "x": 820,
+              "y": 1005,
+              "name": "Atomic commit",
+              "geometry": "M830 1015l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                820,
+                1005,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "I4Smv2",
+              "x": 842,
+              "y": 976,
+              "name": "Atomic commit label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "TX: op replay OR CAS +\nrevision / head / log",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "HohhI",
+              "x": 820,
+              "y": 1065,
+              "name": "Commit outcome",
+              "geometry": "M1070 1075l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m2-5l-8 5 8 5",
+              "viewBox": [
+                820,
+                1065,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "G9IhWh",
+              "x": 842,
+              "y": 1036,
+              "name": "Commit outcome label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "original result / accepted / stale head",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "WpYkd",
+              "x": 235,
+              "y": 1100,
+              "name": "Publish outcome boundary",
+              "width": 930,
+              "height": 255,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "rectangle",
+              "id": "ORLLL",
+              "x": 235,
+              "y": 1100,
+              "name": "Publish outcome operator tab",
+              "fill": "#E8EDF4",
+              "width": 62,
+              "height": 25,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "CKfcv",
+              "x": 244,
+              "y": 1104,
+              "name": "Publish outcome operator",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 50,
+              "content": "alt",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "mPsTC",
+              "x": 311,
+              "y": 1105,
+              "name": "Publish outcome guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 840,
+              "content": "[accepted OR prior successful operation replayed]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "Z1xaC",
+              "x": 340,
+              "y": 1150,
+              "name": "Accepted revision",
+              "geometry": "M830 1160l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m2-5l-8 5 8 5",
+              "viewBox": [
+                340,
+                1150,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#247657",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "DGi59",
+              "x": 362,
+              "y": 1121,
+              "name": "Accepted revision label",
+              "fill": "#247657",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "R11 (first add: R1)",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "wjuIk",
+              "x": 340,
+              "y": 1205,
+              "name": "Acknowledge local state",
+              "geometry": "M350 1215l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                1205,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#247657",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "VC6wk",
+              "x": 362,
+              "y": 1176,
+              "name": "Acknowledge local state label",
+              "fill": "#247657",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "baseline = R11/H;\nclear acknowledged op",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "IdUPz",
+              "x": 225,
+              "y": 1230,
+              "name": "Publish operand separator",
+              "geometry": "M235 1240l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0",
+              "viewBox": [
+                225,
+                1230,
+                950,
+                20
+              ],
+              "width": 950,
+              "height": 20,
+              "stroke": "#8191A2",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "zn9a4",
+              "x": 251,
+              "y": 1248,
+              "name": "Rejected guard",
+              "fill": "#B4533C",
+              "textGrowth": "fixed-width",
+              "width": 850,
+              "content": "[expected revision does not match current head]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "HZaKG",
+              "x": 340,
+              "y": 1295,
+              "name": "Stale revision response",
+              "geometry": "M830 1305l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m2-5l-8 5 8 5",
+              "viewBox": [
+                340,
+                1295,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#B4533C",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "JOi0G",
+              "x": 362,
+              "y": 1266,
+              "name": "Stale revision response label",
+              "fill": "#B4533C",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "409 + remote head; no revision published",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "oAoIW",
+              "x": 340,
+              "y": 1340,
+              "name": "Persist conflict",
+              "geometry": "M350 1350l240 0m-8-5l8 5-8 5",
+              "viewBox": [
+                340,
+                1340,
+                260,
+                20
+              ],
+              "width": 260,
+              "height": 20,
+              "stroke": "#B4533C",
+              "strokeWidth": 1.4,
+              "strokeLinejoin": "round"
+            },
+            {
+              "type": "text",
+              "id": "B9dNFD",
+              "x": 362,
+              "y": 1311,
+              "name": "Persist conflict label",
+              "fill": "#B4533C",
+              "textGrowth": "fixed-width",
+              "width": 216,
+              "content": "preserve both versions;\nmark conflict",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "NlyuZ",
+              "x": 820,
+              "y": 1440,
+              "name": "Poll changes",
+              "geometry": "M1550 1450l-720 0m8-5l-8 5 8 5",
+              "viewBox": [
+                820,
+                1440,
+                740,
+                20
+              ],
+              "width": 740,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "NjdvW",
+              "x": 842,
+              "y": 1411,
+              "name": "Poll changes label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 696,
+              "content": "4  changes(after = cursor)",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "sn9MD",
+              "x": 820,
+              "y": 1495,
+              "name": "Return ordered changes",
+              "geometry": "M830 1505l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m-2-5l8 5-8 5",
+              "viewBox": [
+                820,
+                1495,
+                740,
+                20
+              ],
+              "width": 740,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "W1Zmn",
+              "x": 842,
+              "y": 1466,
+              "name": "Return ordered changes label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 696,
+              "content": "committed changes + cursor; includes file_id, R11, H",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "T9K36",
+              "x": 740,
+              "y": 1540,
+              "name": "Device mapping boundary",
+              "width": 920,
+              "height": 850,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "rectangle",
+              "id": "rNOfn",
+              "x": 740,
+              "y": 1540,
+              "name": "Device mapping operator tab",
+              "fill": "#E8EDF4",
+              "width": 62,
+              "height": 25,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "L1DMjz",
+              "x": 749,
+              "y": 1544,
+              "name": "Device mapping operator",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 50,
+              "content": "alt",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "DNbnA",
+              "x": 816,
+              "y": 1545,
+              "name": "Device mapping guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 830,
+              "content": "[file is unmapped on B]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "AdiHx",
+              "x": 1540,
+              "y": 1580,
+              "name": "Skip unmapped file",
+              "geometry": "M1550 1590l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                1540,
+                1580,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "f8pYuB",
+              "x": 1210,
+              "y": 1587,
+              "name": "Skip unmapped file label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "No download; persist handled cursor",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "rlimf",
+              "x": 730,
+              "y": 1630,
+              "name": "Mapping operand separator",
+              "geometry": "M740 1640l920 0",
+              "viewBox": [
+                730,
+                1630,
+                940,
+                20
+              ],
+              "width": 940,
+              "height": 20,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "vVG6Q",
+              "x": 756,
+              "y": 1648,
+              "name": "Mapped guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 870,
+              "content": "[file is mapped on B]",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "DbFBP",
+              "x": 820,
+              "y": 1700,
+              "name": "Fetch revision bytes",
+              "geometry": "M1550 1710l-720 0m8-5l-8 5 8 5",
+              "viewBox": [
+                820,
+                1700,
+                740,
+                20
+              ],
+              "width": 740,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "Q3A6rf",
+              "x": 842,
+              "y": 1671,
+              "name": "Fetch revision bytes label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 696,
+              "content": "5  getContent(file_id, R11, H)",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "d18PIS",
+              "x": 820,
+              "y": 1755,
+              "name": "Read immutable content",
+              "geometry": "M830 1765l480 0m-8-5l8 5-8 5",
+              "viewBox": [
+                820,
+                1755,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "y5sDK",
+              "x": 842,
+              "y": 1726,
+              "name": "Read immutable content label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "GET account/H",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "P2xux",
+              "x": 820,
+              "y": 1805,
+              "name": "R2 content response",
+              "geometry": "M1310 1815l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m-6 0l-6 0m2-5l-8 5 8 5",
+              "viewBox": [
+                820,
+                1805,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "h7GsB",
+              "x": 842,
+              "y": 1776,
+              "name": "R2 content response label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 456,
+              "content": "immutable bytes",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "WDgb6",
+              "x": 820,
+              "y": 1855,
+              "name": "Temporary download",
+              "geometry": "M830 1865l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m-2-5l8 5-8 5",
+              "viewBox": [
+                820,
+                1855,
+                740,
+                20
+              ],
+              "width": 740,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "MpXVF",
+              "x": 842,
+              "y": 1826,
+              "name": "Temporary download label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 696,
+              "content": "bytes → temporary file; verify SHA-256 = H",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "rectangle",
+              "id": "VmsJw",
+              "x": 1150,
+              "y": 1900,
+              "name": "Apply safety boundary",
+              "width": 495,
+              "height": 455,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "rectangle",
+              "id": "SBdIq",
+              "x": 1150,
+              "y": 1900,
+              "name": "Apply safety operator tab",
+              "fill": "#E8EDF4",
+              "width": 62,
+              "height": 25,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "DSdCv",
+              "x": 1159,
+              "y": 1904,
+              "name": "Apply safety operator",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 50,
+              "content": "alt",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "xhmg8",
+              "x": 1226,
+              "y": 1905,
+              "name": "Apply safety guard",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 405,
+              "content": "[hash invalid / download incomplete]",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "XwVKD",
+              "x": 1540,
+              "y": 1945,
+              "name": "Reject corrupt download",
+              "geometry": "M1550 1955l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                1540,
+                1945,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#B4533C",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "t6ycp",
+              "x": 1210,
+              "y": 1952,
+              "name": "Reject corrupt download label",
+              "fill": "#B4533C",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "Discard temp; retry. Do not advance baseline.",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "eZj49",
+              "x": 1140,
+              "y": 1995,
+              "name": "[valid hash AND destination still equals baseline] separator",
+              "geometry": "M1150 2005l495 0",
+              "viewBox": [
+                1140,
+                1995,
+                515,
+                20
+              ],
+              "width": 515,
+              "height": 20,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "tXc22",
+              "x": 1166,
+              "y": 2012,
+              "name": "[valid hash AND destination still equals baseline]",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 455,
+              "content": "[valid hash AND current = baseline AND current ≠ H]",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "Veif4",
+              "x": 1540,
+              "y": 2055,
+              "name": "Replace safely",
+              "geometry": "M1550 2065l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                1540,
+                2055,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#247657",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "d6j2D",
+              "x": 1210,
+              "y": 2062,
+              "name": "Replace safely label",
+              "fill": "#247657",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "Recheck immediately before atomic replace; set baseline R11/H.",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "U1gRr2",
+              "x": 1140,
+              "y": 2110,
+              "name": "[valid hash AND destination already equals H] separator",
+              "geometry": "M1150 2120l495 0",
+              "viewBox": [
+                1140,
+                2110,
+                515,
+                20
+              ],
+              "width": 515,
+              "height": 20,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "xUB6D",
+              "x": 1166,
+              "y": 2127,
+              "name": "[valid hash AND destination already equals H]",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 455,
+              "content": "[valid hash AND destination already equals H]",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "L0v9Ly",
+              "x": 1540,
+              "y": 2170,
+              "name": "Metadata only",
+              "geometry": "M1550 2180l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                1540,
+                2170,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#247657",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "CDqz5",
+              "x": 1210,
+              "y": 2177,
+              "name": "Metadata only label",
+              "fill": "#247657",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "No rewrite; set baseline R11/H.",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "j9GGKW",
+              "x": 1140,
+              "y": 2220,
+              "name": "[valid hash AND independently changed destination] separator",
+              "geometry": "M1150 2230l495 0",
+              "viewBox": [
+                1140,
+                2220,
+                515,
+                20
+              ],
+              "width": 515,
+              "height": 20,
+              "stroke": "#8191A2",
+              "strokeWidth": 1
+            },
+            {
+              "type": "text",
+              "id": "fnUe6",
+              "x": 1166,
+              "y": 2237,
+              "name": "[valid hash AND independently changed destination]",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 455,
+              "content": "[valid hash AND independently changed destination]",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "F9kHr",
+              "x": 1540,
+              "y": 2280,
+              "name": "Preserve peer conflict",
+              "geometry": "M1550 2290l46 0m0 0l0 24m0 0l-46 0m8-5l-8 5 8 5",
+              "viewBox": [
+                1540,
+                2280,
+                66,
+                44
+              ],
+              "width": 66,
+              "height": 44,
+              "stroke": "#B4533C",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "aBZ6r",
+              "x": 1210,
+              "y": 2287,
+              "name": "Preserve peer conflict label",
+              "fill": "#B4533C",
+              "textGrowth": "fixed-width",
+              "width": 310,
+              "content": "Preserve local + incoming; persist conflict before cursor.",
+              "lineHeight": 1.25,
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "Y2rde",
+              "x": 340,
+              "y": 890,
+              "name": "Ensure content reply",
+              "geometry": "M350 900l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m6 0l6 0m-466-5l-8 5 8 5",
+              "viewBox": [
+                340,
+                890,
+                500,
+                20
+              ],
+              "width": 500,
+              "height": 20,
+              "stroke": "#233549",
+              "strokeWidth": 1.4
+            },
+            {
+              "type": "text",
+              "id": "ytyFh",
+              "x": 362,
+              "y": 880,
+              "name": "Ensure content reply label",
+              "fill": "#233549",
+              "textGrowth": "fixed-width",
+              "width": 430,
+              "content": "content ready",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "path",
+              "id": "G0mnI2",
+              "x": 340,
+              "y": 198,
+              "name": "Stable capture filled call arrow",
+              "geometry": "M350 204l8-5 0 10z",
+              "viewBox": [
+                340,
+                198,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "hVWOv",
+              "x": 580,
+              "y": 304,
+              "name": "New file mapping filled call arrow",
+              "geometry": "M590 310l-8-5 0 10z",
+              "viewBox": [
+                580,
+                304,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "UAqli",
+              "x": 580,
+              "y": 399,
+              "name": "Read existing baseline filled call arrow",
+              "geometry": "M590 405l-8-5 0 10z",
+              "viewBox": [
+                580,
+                399,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "hbl3U",
+              "x": 340,
+              "y": 483,
+              "name": "Content identity filled call arrow",
+              "geometry": "M350 489l8-5 0 10z",
+              "viewBox": [
+                340,
+                483,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "Vz1cr",
+              "x": 580,
+              "y": 519,
+              "name": "Durable pending operation filled call arrow",
+              "geometry": "M590 525l-8-5 0 10z",
+              "viewBox": [
+                580,
+                519,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "ceIFh",
+              "x": 820,
+              "y": 614,
+              "name": "Ensure cloud content filled call arrow",
+              "geometry": "M830 620l-8-5 0 10z",
+              "viewBox": [
+                820,
+                614,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "B35wo6",
+              "x": 1300,
+              "y": 669,
+              "name": "Check deduplicated content filled call arrow",
+              "geometry": "M1310 675l-8-5 0 10z",
+              "viewBox": [
+                1300,
+                669,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "X8FLt",
+              "x": 1300,
+              "y": 809,
+              "name": "Upload snapshot filled call arrow",
+              "geometry": "M1310 815l-8-5 0 10z",
+              "viewBox": [
+                1300,
+                809,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "YTZ5i",
+              "x": 820,
+              "y": 939,
+              "name": "Publish revision filled call arrow",
+              "geometry": "M830 945l-8-5 0 10z",
+              "viewBox": [
+                820,
+                939,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "Qt9sP",
+              "x": 1060,
+              "y": 1009,
+              "name": "Atomic commit filled call arrow",
+              "geometry": "M1070 1015l-8-5 0 10z",
+              "viewBox": [
+                1060,
+                1009,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "BHZli",
+              "x": 580,
+              "y": 1209,
+              "name": "Acknowledge local state filled call arrow",
+              "geometry": "M590 1215l-8-5 0 10z",
+              "viewBox": [
+                580,
+                1209,
+                20,
+                12
+              ],
+              "fill": "#247657",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "s9oC9",
+              "x": 580,
+              "y": 1344,
+              "name": "Persist conflict filled call arrow",
+              "geometry": "M590 1350l-8-5 0 10z",
+              "viewBox": [
+                580,
+                1344,
+                20,
+                12
+              ],
+              "fill": "#B4533C",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "U2fU9",
+              "x": 820,
+              "y": 1444,
+              "name": "Poll changes filled call arrow",
+              "geometry": "M830 1450l8-5 0 10z",
+              "viewBox": [
+                820,
+                1444,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "Qui9V",
+              "x": 1540,
+              "y": 1608,
+              "name": "Skip unmapped file filled call arrow",
+              "geometry": "M1550 1614l8-5 0 10z",
+              "viewBox": [
+                1540,
+                1608,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "KQVmp",
+              "x": 820,
+              "y": 1704,
+              "name": "Fetch revision bytes filled call arrow",
+              "geometry": "M830 1710l8-5 0 10z",
+              "viewBox": [
+                820,
+                1704,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "cKkM8",
+              "x": 1300,
+              "y": 1759,
+              "name": "Read immutable content filled call arrow",
+              "geometry": "M1310 1765l-8-5 0 10z",
+              "viewBox": [
+                1300,
+                1759,
+                20,
+                12
+              ],
+              "fill": "#233549",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "h4OrGA",
+              "x": 1540,
+              "y": 1973,
+              "name": "Reject corrupt download filled call arrow",
+              "geometry": "M1550 1979l8-5 0 10z",
+              "viewBox": [
+                1540,
+                1973,
+                20,
+                12
+              ],
+              "fill": "#B4533C",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "f2pYD",
+              "x": 1540,
+              "y": 2083,
+              "name": "Replace safely filled call arrow",
+              "geometry": "M1550 2089l8-5 0 10z",
+              "viewBox": [
+                1540,
+                2083,
+                20,
+                12
+              ],
+              "fill": "#247657",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "X2aQY1",
+              "x": 1540,
+              "y": 2198,
+              "name": "Metadata only filled call arrow",
+              "geometry": "M1550 2204l8-5 0 10z",
+              "viewBox": [
+                1540,
+                2198,
+                20,
+                12
+              ],
+              "fill": "#247657",
+              "width": 20,
+              "height": 12
+            },
+            {
+              "type": "path",
+              "id": "Q0T9Cm",
+              "x": 1540,
+              "y": 2308,
+              "name": "Preserve peer conflict filled call arrow",
+              "geometry": "M1550 2314l8-5 0 10z",
+              "viewBox": [
+                1540,
+                2308,
+                20,
+                12
+              ],
+              "fill": "#B4533C",
+              "width": 20,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "qwDC2",
+          "name": "Persistent state after successful sync",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "oKTKG",
+              "name": "State heading",
+              "fill": "#162638",
+              "content": "WHAT CHANGES ON DISK & IN CLOUD",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lUaHJ",
+              "name": "Three stores",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "iJJTo",
+                  "name": "Origin SQLite",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D8E1E9",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S07r6",
+                      "name": "Origin SQLite title",
+                      "fill": "#2563A6",
+                      "content": "A  /  SQLite + filesystem",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bC0YD",
+                      "name": "Origin SQLite detail",
+                      "fill": "#162638",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "mapping: file-123 → /home/sakthi/instructions/AGENTS.md\nbaseline: R10 / H10 → R11 / H11\npending_ops: queued → acknowledged\nUser file stays at its own configured path.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MiwdF",
+                  "name": "Shared persistence",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D8E1E9",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SbiP8",
+                      "name": "Shared persistence title",
+                      "fill": "#2563A6",
+                      "content": "CLOUD  /  Postgres + R2",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "c1DZIE",
+                      "name": "Shared persistence detail",
+                      "fill": "#162638",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "files: file-123.current_revision → R11\nrevisions: R11(parent R10, hash H11, device, time)\nchange_log: ordered entry + cursor\nR2: account/H11 added only if absent; H10 retained.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "isHGI",
+                  "name": "Peer SQLite",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D8E1E9",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "T8li43",
+                      "name": "Peer SQLite title",
+                      "fill": "#2563A6",
+                      "content": "B  /  SQLite + filesystem",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "kWzj4",
+                      "name": "Peer SQLite detail",
+                      "fill": "#162638",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "mapping: same file-123 → C:\\Users\\Sakthi\\instructions\\AGENTS.md\nSafe apply: destination bytes → H11; baseline → R11\nPersist handled change cursor; queue conflicts durably.\nUnmapped files leave the filesystem unchanged.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HvAx3",
+          "name": "Three distinct identifiers",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "children": [
+            {
+              "type": "text",
+              "id": "hzQvI",
+              "name": "Identity heading",
+              "fill": "#162638",
+              "content": "IDENTITY IS NOT A PATH. CONTENT IS NOT IDENTITY.",
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "g65vjs",
+              "name": "Identifier key",
+              "width": "fill_container",
+              "gap": 24,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "E44ge",
+                  "name": "file_id",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Kiy8c",
+                      "name": "file_id label",
+                      "fill": "#2563A6",
+                      "content": "file_id  /  file-123 · permanent",
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MPUmJ",
+                      "name": "file_id explanation",
+                      "fill": "#536679",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Logical file; unchanged by edits or explicit remapping.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "I1Bmo",
+                  "name": "revision_id",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "EkpqF",
+                      "name": "revision_id label",
+                      "fill": "#2563A6",
+                      "content": "revision_id  /  R10 → R11 · new version",
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BYp2k",
+                      "name": "revision_id explanation",
+                      "fill": "#536679",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A recorded snapshot; restore creates a new revision.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mgssE",
+                  "name": "content_hash",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HKYm1",
+                      "name": "content_hash label",
+                      "fill": "#2563A6",
+                      "content": "content_hash  /  H10 → H11 · SHA-256",
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "q3Rvkm",
+                      "name": "content_hash explanation",
+                      "fill": "#536679",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Exact bytes; distinct file IDs can reuse one content object.",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "q5so9",
+          "name": "Scope and guardrails",
+          "width": "fill_container",
+          "fill": "#E8EDF4",
+          "layout": "vertical",
+          "gap": 10,
+          "padding": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "p8d5o",
+              "name": "Policy heading",
+              "fill": "#2563A6",
+              "content": "V1: WHOLE-FILE OBJECTS. HISTORY WITHOUT SILENT OVERWRITES.",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "xBhV6",
+              "name": "Policy detail",
+              "fill": "#162638",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Later: chunk manifests reuse unchanged blocks for large files. Prune bytes only when no retained revision or dependency needs them.\nExplicit remap ≠ new identity. Unmap this device ≠ delete everywhere. Path names do not translate instructions between agents.",
+              "lineHeight": 1.4,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "nYJM3",
+          "name": "Legend",
+          "fill": "#536679",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "UML KEY   Filled arrow: call   Dashed arrow: reply   Open arrow: filesystem signal   Dashed vertical: lifeline   alt: guarded alternatives   opt: conditional   loop: retries",
+          "lineHeight": 1.4,
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mBRay",
+      "x": 5600,
+      "y": 0,
+      "name": "2. FoldRelay · A file’s journey",
+      "width": 1800,
+      "fill": "#F7F8FA",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": 64,
+      "children": [
+        {
+          "type": "frame",
+          "id": "VwG8p",
+          "name": "Diagram heading",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "M2PHY",
+              "name": "Eyebrow",
+              "fill": "#215BDD",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "FOLDRELAY   /   SYSTEM DESIGN   /   02",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "ome74",
+              "name": "Title",
+              "fill": "#172636",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "A local edit becomes a shared revision.",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 48,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "j2iPHO",
+              "name": "Subtitle",
+              "fill": "#536579",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Permanent file identity. Device-owned paths. Immutable bytes. No silent overwrites.",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "I3Hdu",
+          "name": "Three distinct identities",
+          "width": "fill_container",
+          "fill": "#E9EEF5",
+          "gap": 28,
+          "padding": [
+            22,
+            26
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "EJgHB",
+              "name": "file_id",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UjDQ8",
+                  "name": "file_id label",
+                  "fill": "#215BDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "file_id",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "lZRB6",
+                  "name": "file_id meaning",
+                  "fill": "#536579",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "file-123 · the logical file\nPermanent, even when moved",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "m8FP3",
+              "name": "revision_id",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Z9De1A",
+                  "name": "revision_id label",
+                  "fill": "#215BDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "revision_id",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "e8czg9",
+                  "name": "revision_id meaning",
+                  "fill": "#536579",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "R10 → R11 · a recorded version\nNew for every accepted revision",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "H7KVs",
+              "name": "content_hash",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ADFtE",
+                  "name": "content_hash label",
+                  "fill": "#215BDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "content_hash",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 20,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "gLBQ4",
+                  "name": "content_hash meaning",
+                  "fill": "#536579",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "H10 → H11 · SHA-256 of bytes\nSame bytes share one content object",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "RkQeC",
+          "name": "Publish flow label",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 5,
+          "children": [
+            {
+              "type": "text",
+              "id": "C9oGdc",
+              "name": "Publish heading",
+              "fill": "#172636",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "01  /  CAPTURE → UPLOAD → COMMIT",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "L01Lni",
+              "name": "Publish caption",
+              "fill": "#536579",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Example: desktop changes file-123 from R10 to R11. A new file uses expected_revision = null.",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "v5TSrd",
+          "name": "Explicit upload route",
+          "width": "fill_container",
+          "gap": 18,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "A8UQAV",
+              "name": "Route 0",
+              "fill": "#215BDD",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Capture stable bytes",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "tC21g",
+              "name": "Forward arrow 1",
+              "width": 32,
+              "height": 32,
+              "icon": "arrow-right",
+              "library": "lucide",
+              "fill": "#215BDD"
+            },
+            {
+              "type": "text",
+              "id": "f5ElCA",
+              "name": "Route 1",
+              "fill": "#215BDD",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Ensure H11 in R2",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "icon",
+              "id": "K0yUSu",
+              "name": "Forward arrow 2",
+              "width": 32,
+              "height": 32,
+              "icon": "arrow-right",
+              "library": "lucide",
+              "fill": "#215BDD"
+            },
+            {
+              "type": "text",
+              "id": "P7dg9",
+              "name": "Route 2",
+              "fill": "#215BDD",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Commit R11 in PostgreSQL",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lzYc2",
+          "name": "Publishing sequence",
+          "width": "fill_container",
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "vQPKA",
+              "name": "LOCAL DEVICE",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "stroke": "#D6DEE7",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 18,
+              "padding": 26,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dUFd6",
+                  "name": "LOCAL DEVICE title",
+                  "fill": "#215BDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "LOCAL DEVICE",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "X9xhR2",
+                  "name": "LOCAL DEVICE subtitle",
+                  "fill": "#172636",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Desktop agent + SQLite",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "bAYAC",
+                  "name": "1  Detect an add or edit",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aifMg",
+                      "name": "1  Detect an add or edit heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "1  Detect an add or edit",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UNpfa",
+                      "name": "1  Detect an add or edit body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Watch only mapped paths.\nDebounce; capture a stable snapshot.\nHash the captured bytes, not a live file.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iptKg",
+                  "name": "2  Resolve logical identity",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DntoN",
+                      "name": "2  Resolve logical identity heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "2  Resolve logical identity",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "B2shrX",
+                      "name": "2  Resolve logical identity body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "EDIT → reuse file_id + base R10.\nADD → allocate file_id + map path; base is null (create only).\nSame hash as synced? No-op.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oTZIL",
+                  "name": "3  Persist pending operation",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TrcIV",
+                      "name": "3  Persist pending operation heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "3  Persist pending operation",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "X33aMa",
+                      "name": "3  Persist pending operation body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SQLite stores op_id, file_id, base revision, hash and snapshot.\nRetain it across offline periods and retries.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jygGg",
+              "name": "CLOUD BYTES",
+              "width": "fill_container",
+              "fill": "#EEF3FF",
+              "stroke": "#D6DEE7",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 18,
+              "padding": 26,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MUkPD",
+                  "name": "CLOUD BYTES title",
+                  "fill": "#147961",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "CLOUD BYTES",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "A4dyh",
+                  "name": "CLOUD BYTES subtitle",
+                  "fill": "#172636",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "R2 · immutable object storage",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "j3NAXD",
+                  "name": "4  Ensure bytes exist",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "a1u37j",
+                      "name": "4  Ensure bytes exist heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "4  Ensure bytes exist",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cXI9v",
+                      "name": "4  Ensure bytes exist body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Agent asks whether H11 exists in this account’s storage.\nPresent → reuse object.\nMissing → upload snapshot.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "M7fFvC",
+                  "name": "R2  /  H11",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RNAvU",
+                      "name": "R2  /  H11 heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "R2  /  H11",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UIyKo",
+                      "name": "R2  /  H11 body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Store immutable bytes by content hash. Verify upload completion before publishing metadata.\nDo not overwrite H10.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "jiTHr",
+                  "name": "Then submit revision →",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NJtHj",
+                      "name": "Then submit revision → heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Then submit revision →",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zfqhj",
+                      "name": "Then submit revision → body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "{ op_id, file_id, content_hash: H11,\n  expected_revision: R10 }\nNew file: expected_revision: null.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TkbKN",
+              "name": "CLOUD METADATA",
+              "width": "fill_container",
+              "fill": "#EAF5F0",
+              "stroke": "#D6DEE7",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "gap": 18,
+              "padding": 26,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ArND2",
+                  "name": "CLOUD METADATA title",
+                  "fill": "#147961",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "CLOUD METADATA",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "AoD7Y",
+                  "name": "CLOUD METADATA subtitle",
+                  "fill": "#172636",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Railway API + PostgreSQL",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "lCNLI",
+                  "name": "5  Atomic compare & commit",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y8sWFy",
+                      "name": "5  Atomic compare & commit heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "5  Atomic compare & commit",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "XgdQT",
+                      "name": "5  Atomic compare & commit body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Authorize account + file access.\nValidate content is available.\nCurrent revision must equal R10; a create requires file_id absent.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "FE9Dl",
+                  "name": "MATCH → publish R11",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gORLD",
+                      "name": "MATCH → publish R11 heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "MATCH → publish R11",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "k59wu0",
+                      "name": "MATCH → publish R11 body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "One transaction inserts revision, advances files.current_revision, and appends ordered change-log entry.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "T9FW8Q",
+                  "name": "MISMATCH → reject",
+                  "width": "fill_container",
+                  "stroke": "#CBD5E1",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": [
+                    18,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "d4ViK",
+                      "name": "MISMATCH → reject heading",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "MISMATCH → reject",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 22,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "nM6d7",
+                      "name": "MISMATCH → reject body",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Never overwrite the newer head.\nKeep pending local snapshot; fetch remote head and report conflict.\nSame op_id returns prior result.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Iep8p",
+          "name": "Acknowledgement route",
+          "width": "fill_container",
+          "fill": "#172636",
+          "gap": 24,
+          "padding": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "YPHDD",
+              "name": "Acknowledgement arrow",
+              "width": 38,
+              "height": 38,
+              "icon": "arrow-left",
+              "library": "lucide",
+              "fill": "#97B9FF"
+            },
+            {
+              "type": "text",
+              "id": "CE5SN",
+              "name": "Acknowledgement",
+              "fill": "#FFFFFF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "6  ACK R11 → SQLite records R11 + H11; clear the committed pending operation.\nThe desktop file is not rewritten. If edited again during upload, queue the new bytes against R11.",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kuloN",
+          "name": "Receiving device flow",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "O4T1dD",
+              "name": "Receive title",
+              "fill": "#172636",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "02  /  THE LAPTOP RECEIVES R11",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "yDPz3",
+              "name": "Receive sequence",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dF7A1",
+                  "name": "Receive step 1",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D6DEE7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y5e76D",
+                      "name": "Step 1",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Poll ordered change log\nfrom saved cursor",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "NrnD5",
+                  "name": "Receive arrow 1",
+                  "width": 30,
+                  "height": 30,
+                  "icon": "arrow-right",
+                  "library": "lucide",
+                  "fill": "#215BDD"
+                },
+                {
+                  "type": "frame",
+                  "id": "xw3Mz",
+                  "name": "Receive step 2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D6DEE7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U8727",
+                      "name": "Step 2",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Resolve file_id mapping\nUnmapped? Skip download.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "icon",
+                  "id": "SXhPi",
+                  "name": "Receive arrow 2",
+                  "width": 30,
+                  "height": 30,
+                  "icon": "arrow-right",
+                  "library": "lucide",
+                  "fill": "#215BDD"
+                },
+                {
+                  "type": "frame",
+                  "id": "KIXEc",
+                  "name": "Receive step 3",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D6DEE7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WtmvR",
+                      "name": "Step 3",
+                      "fill": "#172636",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Download to a temp file\nVerify SHA-256 = H11",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 20,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "r70g8o",
+              "name": "Pre-write decision",
+              "width": "fill_container",
+              "fill": "#E9EEF5",
+              "layout": "vertical",
+              "gap": 6,
+              "padding": 22,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "CzwNI",
+                  "name": "Decision title",
+                  "fill": "#172636",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "↓  Recheck destination immediately before replacement",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "DJVW9",
+                  "name": "Decision detail",
+                  "fill": "#536579",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Compare current local bytes with last synced H10 and incoming H11. Guard the replacement against intervening edits.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 19,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lOovP",
+              "name": "Three safe receive outcomes",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZHny9",
+                  "name": "LOCAL = H10",
+                  "width": "fill_container",
+                  "fill": "#EAF5F0",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Wk18O",
+                      "name": "LOCAL = H10 label",
+                      "fill": "#147961",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LOCAL = H10",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 21,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "haPmx",
+                      "name": "LOCAL = H10 action",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "↓ SAFE TO APPLY\nAtomically replace with verified temp file.\nSQLite → last_synced_revision R11, hash H11.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "B561ZO",
+                  "name": "LOCAL = H11",
+                  "width": "fill_container",
+                  "fill": "#EEF3FF",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KIWW3",
+                      "name": "LOCAL = H11 label",
+                      "fill": "#215BDD",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LOCAL = H11",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 21,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "dgtrL",
+                      "name": "LOCAL = H11 action",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "↓ ALREADY CURRENT\nDo not rewrite the file.\nSQLite → last_synced_revision R11, hash H11.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "KX4aX",
+                  "name": "LOCAL ≠ H10 AND H11",
+                  "width": "fill_container",
+                  "fill": "#FFF0E7",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "diUFA",
+                      "name": "LOCAL ≠ H10 AND H11 label",
+                      "fill": "#9D4517",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LOCAL ≠ H10 AND H11",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 21,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HS505",
+                      "name": "LOCAL ≠ H10 AND H11 action",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "↓ CONFLICT · PRESERVE BOTH\nKeep local file + save incoming conflict copy.\nRecord conflict; do not mark local bytes synced.",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 19,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "o9JCnW",
+              "name": "Cursor reliability",
+              "fill": "#536579",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Advance the cursor only after each change is durably applied, skipped or recorded as a conflict. Transfer or verification failure → retry; leave the original intact.",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "cb8EN",
+          "name": "Before and after state",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "children": [
+            {
+              "type": "text",
+              "id": "g2JgvK",
+              "name": "State title",
+              "fill": "#172636",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "03  /  WHAT ACTUALLY CHANGES",
+              "lineHeight": 1.35,
+              "fontFamily": "Inter",
+              "fontSize": 24,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lZuUc",
+              "name": "State comparison",
+              "width": "fill_container",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EeeMU",
+                  "name": "DESKTOP · SQLITE + FILESYSTEM",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D6DEE7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "y1HC0W",
+                      "name": "DESKTOP · SQLITE + FILESYSTEM label",
+                      "fill": "#215BDD",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "DESKTOP · SQLITE + FILESYSTEM",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "gJAfQ",
+                      "name": "DESKTOP · SQLITE + FILESYSTEM data",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Path remains /home/sakthi/instructions/AGENTS.md\nfile_id = file-123 stays unchanged\nR10 / H10 → R11 / H11 after ACK\nPending op retained until commit is acknowledged",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "gDHnq",
+                  "name": "CLOUD · POSTGRESQL + R2",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D6DEE7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "oCwap",
+                      "name": "CLOUD · POSTGRESQL + R2 label",
+                      "fill": "#215BDD",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "CLOUD · POSTGRESQL + R2",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "p4uU1V",
+                      "name": "CLOUD · POSTGRESQL + R2 data",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "files: current_revision R10 → R11\nrevisions: append R11 (parent R10, H11, device, time)\nchange log: append event with ordered cursor\nR2: retain H10; add H11 only if missing",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E3eQVx",
+                  "name": "LAPTOP · SQLITE + FILESYSTEM",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF",
+                  "stroke": "#D6DEE7",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 22,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "IhgCv",
+                      "name": "LAPTOP · SQLITE + FILESYSTEM label",
+                      "fill": "#215BDD",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "LAPTOP · SQLITE + FILESYSTEM",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MQ4jC",
+                      "name": "LAPTOP · SQLITE + FILESYSTEM data",
+                      "fill": "#536579",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Path remains C:\\Users\\Sakthi\\instructions\\AGENTS.md\nClean destination → write H11; record R11 / H11\nDirty destination → preserve local + incoming\nNo mapping → no download, not a deletion",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "t3Gf8q",
+          "name": "History and boundary rules",
+          "width": "fill_container",
+          "stroke": "#CBD5E1",
+          "strokeWidth": {
+            "top": 1
+          },
+          "gap": 30,
+          "padding": [
+            24,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "x7tYIf",
+              "name": "HISTORY WITHOUT DUPLICATION",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kE8J2",
+                  "name": "HISTORY WITHOUT DUPLICATION label",
+                  "fill": "#215BDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "HISTORY WITHOUT DUPLICATION",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "BGt6i",
+                  "name": "HISTORY WITHOUT DUPLICATION rule",
+                  "fill": "#536579",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Start with whole-file objects. Later: revisions reference chunk manifests; upload only missing chunks. Restore old bytes as a new revision; retain referenced history.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M8hIlf",
+              "name": "IDENTITY IS NOT A PATH",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Grtf5",
+                  "name": "IDENTITY IS NOT A PATH label",
+                  "fill": "#215BDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "IDENTITY IS NOT A PATH",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "M0z1N",
+                  "name": "IDENTITY IS NOT A PATH rule",
+                  "fill": "#536579",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Explicit remapping changes only this device’s destination. Unmapping ≠ cloud deletion. Two file IDs may share the same hash; deduplication stays within an account.",
+                  "lineHeight": 1.35,
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "fileToken": "95324259-300b-4677-8d81-b64578bc73bc"
