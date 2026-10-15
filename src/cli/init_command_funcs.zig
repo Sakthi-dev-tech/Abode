@@ -2,10 +2,11 @@ const std = @import("std");
 const builtin = @import("builtin");
 const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
 
+const dir = std.Io.Dir;
+
 /// Create all required config files for Abode
 pub fn create_config_files(init: std.process.Init) !void {
     const io = init.io;
-    const dir = std.Io.Dir;
 
     const allocator = init.gpa;
 
@@ -35,7 +36,6 @@ pub fn create_config_files(init: std.process.Init) !void {
 /// This will become a git repository connected to the user's remote repository
 pub fn create_local_store_files(init: std.process.Init) !void {
     const io = init.io;
-    const dir = std.Io.Dir;
 
     const allocator = init.gpa;
 
