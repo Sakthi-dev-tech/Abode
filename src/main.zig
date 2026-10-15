@@ -33,7 +33,7 @@ pub fn main(init: std.process.Init) !void {
                 .value_ref = r.mkRef(&config.port),
             },
         }),
-        .target = cli.CommandTarget{ .subcommands = try r.allocCommands(&.{.{
+        .target = cli.CommandTarget{ .subcommands = try r.allocCommands(&.{ .{
             .name = "init",
             .description = .{
                 .one_line = "Initialise Abode",
@@ -43,11 +43,25 @@ pub fn main(init: std.process.Init) !void {
                     .exec = runInit,
                 },
             },
-        }}) },
+        }, .{
+            .name = "verify",
+            .description = .{
+                .one_line = "Verify the folders and config file created by init",
+            },
+            .target = .{
+                .action = .{
+                    .exec = runVerify,
+                },
+            },
+        } }) },
     }, .version = "0.1.0", .author = "ADormantSakthi" };
     return r.run(&app);
 }
 
 fn runInit() !void {
     try cli_main.init_cmd(command_init);
+}
+
+fn runVerify() !void {
+    try cli_main.verify_cmd(command_init);
 }
