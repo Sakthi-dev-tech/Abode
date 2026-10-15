@@ -7,7 +7,7 @@ pub fn init_cmd(init: std.process.Init) !void {
     std.debug.print("Init Command Triggered\n", .{});
 
     try create_config_files(init);
-    try create_local_store_files();
+    try create_local_store_files(init);
 }
 
 /// Create all required config files for Abode
@@ -27,19 +27,7 @@ fn create_config_files(init: std.process.Init) !void {
 
     // Create the config folder
     dir.createDirAbsolute(io, absolute_path, .default_dir) catch |err| {
-        switch (err) {
-            error.PathAlreadyExists => {
-                std.debug.print("Path already exists: {s}\n", .{absolute_path});
-            },
-            error.PermissionDenied => {
-                std.debug.print("Permission denied!", .{});
-                return err;
-            },
-            else => {
-                std.debug.print("Unknown error occured. Error: {}\n", .{err});
-                return err;
-            },
-        }
+        try catch_error_while_creating(err, "Config folder already exists!\n");
     };
 
     // Get the config_dir Dir struct
@@ -53,6 +41,43 @@ fn create_config_files(init: std.process.Init) !void {
 
 /// Create required folders for storing local copy of sync files
 /// This will become a git repository connected to the user's remote repository
-fn create_local_store_files() !void {
-    return;
+fn create_local_store_files(init: std.process.Init) !void {
+    const io = init.io;
+    const dir = std.Io.Dir;
+
+    const allocator = init.gpa;
+
+    // Get absolute path to the location of the local copy of my files to init the workspace
+    const workspace_dir = try home_dir_funcs.get_home_dir(init);
+    const absolute_path = try std.fs.path.join(allocator, &.{ workspace_dir, ".local", "share", "abode" });
+    defer allocator.free(absolute_path);
+
+    // Create the local workspace folder
+    dir.createDirAbsolute(io, absolute_path, .default_dir) catch |err| {
+        try catch_error_while_creating(err, "Local workspace folder already exits\n");
+    };
+
+    const local_workspace_dir = try dir.openDirAbsolute(io, absolute_path, .{});
+    defer local_workspace_dir.close(io);
+
+    local_workspace_dir.createDir(io, "roots", .default_dir) catch |err| {
+        try catch_error_while_creating(err, "Roots folder in local workspace folder already exists!\n");
+    };
+}
+
+/// Handle error during file/folder creation
+fn catch_error_while_creating(err: anyerror, path_exists_debug_print: []const u8) !void {
+    switch (err) {
+        error.PathAlreadyExists => {
+            std.debug.print("{s}", .{path_exists_debug_print});
+        },
+        error.PermissionDenied => {
+            std.debug.print("Permission denied!", .{});
+            return err;
+        },
+        else => {
+            std.debug.print("Unknown error occured. Error: {}\n", .{err});
+            return err;
+        },
+    }
 }
