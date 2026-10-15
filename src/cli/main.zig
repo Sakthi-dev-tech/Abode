@@ -1,5 +1,6 @@
 const std = @import("std");
 const builtin = @import("builtin");
+const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
 
 /// This function inits the project on the user's device
 pub fn init_cmd(init: std.process.Init) !void {
@@ -17,11 +18,10 @@ fn create_config_files(init: std.process.Init) !void {
     const allocator = init.gpa;
 
     // Get the absolute path to the location of the config folder
-    const home_env = if (builtin.os.tag == .windows) "USERPROFILE" else "HOME";
-    const home = init.environ_map.get(home_env) orelse return error.HomeDirectoryNotFound;
+    const home_dir = try home_dir_funcs.get_home_dir(init);
     const absolute_path = try std.fs.path.join(
         allocator,
-        &.{ home, ".config", "abode" },
+        &.{ home_dir, ".config", "abode" },
     );
     defer allocator.free(absolute_path);
 
@@ -47,11 +47,7 @@ fn create_config_files(init: std.process.Init) !void {
     defer config_dir.close(io);
 
     // Create the config.toml file
-    const config_file = try config_dir.createFile(
-        io,
-        "config.toml",
-        .{ .read = true, .truncate = false }
-        );
+    const config_file = try config_dir.createFile(io, "config.toml", .{ .read = true, .truncate = false });
     defer config_file.close(io);
 }
 
