@@ -9,7 +9,7 @@ pub fn init_cmd(init: std.process.Init) !void {
     try create_local_store_files();
 }
 
-/// Create all required config files for FoldRelay
+/// Create all required config files for Abode
 fn create_config_files(init: std.process.Init) !void {
     const io = init.io;
     const dir = std.Io.Dir;
@@ -21,7 +21,7 @@ fn create_config_files(init: std.process.Init) !void {
     const home = init.environ_map.get(home_env) orelse return error.HomeDirectoryNotFound;
     const absolute_path = try std.fs.path.join(
         allocator,
-        &.{ home, ".config", "foldrelay" },
+        &.{ home, ".config", "abode" },
     );
     defer allocator.free(absolute_path);
 

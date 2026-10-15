@@ -1,7 +1,7 @@
 const std = @import("std");
 const cli = @import("cli");
 
-const FoldRelay = @import("FoldRelay");
+const Abode = @import("Abode");
 const cli_main = @import("cli/main.zig");
 
 var config = struct {
@@ -18,7 +18,7 @@ pub fn main(init: std.process.Init) !void {
     defer r.deinit();
 
     const app = cli.App{ .command = cli.Command{
-        .name = "FoldRelay",
+        .name = "Abode",
         .description = cli.Description{ .one_line = "Your files will be the same on all your devices" },
         .options = try r.allocOptions(&.{
             .{
@@ -36,7 +36,7 @@ pub fn main(init: std.process.Init) !void {
         .target = cli.CommandTarget{ .subcommands = try r.allocCommands(&.{.{
             .name = "init",
             .description = .{
-                .one_line = "Initialise FoldRelay",
+                .one_line = "Initialise Abode",
             },
             .target = .{
                 .action = .{
