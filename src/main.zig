@@ -77,5 +77,5 @@ fn run_verify() !void {
 }
 
 fn run_add_file() !void {
-    try cli_main.add_file_cmd();
+    try cli_main.add_file_cmd(command_init);
 }

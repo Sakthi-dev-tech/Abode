@@ -17,6 +17,6 @@ pub fn verify_cmd(init: std.process.Init) !void {
 }
 
 /// This function will add the provided file to be tracked
-pub fn add_file_cmd() !void {
-    try add_file_commands.add_file_to_track();
+pub fn add_file_cmd(init: std.process.Init) !void {
+    try add_file_commands.add_file_to_track(init);
 }
