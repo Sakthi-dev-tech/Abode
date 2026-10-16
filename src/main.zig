@@ -40,7 +40,7 @@ pub fn main(init: std.process.Init) !void {
             },
             .target = .{
                 .action = .{
-                    .exec = runInit,
+                    .exec = run_init,
                 },
             },
         }, .{
@@ -50,18 +50,32 @@ pub fn main(init: std.process.Init) !void {
             },
             .target = .{
                 .action = .{
-                    .exec = runVerify,
+                    .exec = run_verify,
                 },
+            },
+        }, .{
+            .name = "add",
+            .description = .{
+                .one_line = "Add a file to set up tracking given the relative path name" 
+            },
+            .target = .{
+                .action = .{ 
+                    .exec = run_add_file 
+                }, 
             },
         } }) },
     }, .version = "0.1.0", .author = "ADormantSakthi" };
     return r.run(&app);
 }
 
-fn runInit() !void {
+fn run_init() !void {
     try cli_main.init_cmd(command_init);
 }
 
-fn runVerify() !void {
+fn run_verify() !void {
     try cli_main.verify_cmd(command_init);
+}
+
+fn run_add_file() !void {
+    try cli_main.add_file_cmd();
 }
