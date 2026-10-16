@@ -8,7 +8,7 @@ const dir = std.Io.Dir;
 pub fn create_config_files(init: std.process.Init) !void {
     const io = init.io;
 
-    const allocator = init.gpa;
+    const allocator = init.arena.allocator();
 
     // Get the absolute path to the location of the config folder
     const home_dir = try home_dir_funcs.get_home_dir(init);
