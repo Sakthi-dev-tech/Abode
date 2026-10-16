@@ -11,6 +11,9 @@ var config = struct {
 
 var command_init: std.process.Init = undefined;
 
+// Add command variables
+var file_subpath: []const u8 = undefined;
+
 pub fn main(init: std.process.Init) !void {
     command_init = init;
 
@@ -60,9 +63,18 @@ pub fn main(init: std.process.Init) !void {
             },
             .target = .{
                 .action = .{ 
-                    .exec = run_add_file 
+                    .exec = run_add_file,
                 }, 
             },
+            .options = try r.allocOptions(&.{
+                .{
+                    .long_name = "path",
+                    .short_alias = 'p',
+                    .help = "Use this command in order to add a file in your current working directory to track",
+                    .required = true,
+                    .value_ref = r.mkRef(&file_subpath)
+                }
+            })
         } }) },
     }, .version = "0.1.0", .author = "ADormantSakthi" };
     return r.run(&app);
@@ -77,5 +89,5 @@ fn run_verify() !void {
 }
 
 fn run_add_file() !void {
-    try cli_main.add_file_cmd(command_init);
+    try cli_main.add_file_cmd(command_init, file_subpath);
 }

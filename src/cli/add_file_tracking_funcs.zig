@@ -1,8 +1,9 @@
 const std = @import("std");
+const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
 
 /// Register a file or directory as a sync root, or enable an existing root on this device.
 /// Intended flow from design_planning.excalidraw; the steps below are not implemented yet.
-pub fn add_file_to_track(init: std.process.Init) !void {
+pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void {
     const io = init.io;
     const dir = std.Io.Dir;
 
@@ -11,7 +12,13 @@ pub fn add_file_to_track(init: std.process.Init) !void {
     // Expand a leading ~/ using this device's home directory, without shell expansion.
     // Reject paths inside Abode's own storage; define a symlink policy before supporting links.
     const current_working_dir = dir.cwd();
-    defer current_working_dir.close(io);
+
+    const file_path = try current_working_dir.realPathFileAlloc(
+        io,
+        sub_dir_path,
+        init.arena.allocator()
+        );
+    std.debug.print("Current add file path: {s}\n", .{file_path});
 
     // 2. Derive the shared fallback_path relative to home, storing ~/ literally.
     // For a source outside home, ask for a portable ~/ fallback and keep the actual
