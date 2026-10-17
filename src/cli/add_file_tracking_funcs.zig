@@ -26,8 +26,6 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     // Check containment by path components, not a string prefix. Initially accept
     // only descendants of home; reject home itself and outside-home paths.
     // No shared absolute paths, generated root IDs or fallback-path metadata.
-    const os_home_dir = home_dir_funcs.get_home_dir();
-    var path_iterator = std.mem.splitScalar(u8, file_path, '/');
 
     // 3. Encode that relative path into the source tree using chezmoi-style names.
     // Example: ~/.config/nvim/init.lua -> repo/dot_config/nvim/init.lua;
