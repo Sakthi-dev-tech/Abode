@@ -15,6 +15,7 @@ var command_init: std.process.Init = undefined;
 // Add command variables
 var file_subpath: []const u8 = undefined;
 
+// Flag to ensure undefined vars are Initialised
 var initialised_undefined: bool = false;
 
 pub fn main(init: std.process.Init) !void {
@@ -98,7 +99,6 @@ fn run_verify() !void {
 }
 
 fn run_add_file() !void {
-    assert(initialised_undefined != false);
     assert(initialised_undefined != false);
 
     try cli_main.add_file_cmd(command_init, file_subpath);
