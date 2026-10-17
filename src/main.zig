@@ -21,7 +21,7 @@ pub fn main(init: std.process.Init) !void {
     defer r.deinit();
 
     const app = cli.App{ .command = cli.Command{
-        .name = "Abode",
+        .name = "abode",
         .description = cli.Description{ .one_line = "Your files will be the same on all your devices" },
         .options = try r.allocOptions(&.{
             .{
