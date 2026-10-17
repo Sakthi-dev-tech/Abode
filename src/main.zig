@@ -1,5 +1,6 @@
 const std = @import("std");
 const cli = @import("cli");
+const assert = std.debug.assert;
 
 const Abode = @import("Abode");
 const cli_main = @import("cli/main.zig");
@@ -81,13 +82,20 @@ pub fn main(init: std.process.Init) !void {
 }
 
 fn run_init() !void {
+    assert(command_init != undefined);
+
     try cli_main.init_cmd(command_init);
 }
 
 fn run_verify() !void {
+    assert(command_init != undefined);
+
     _ = cli_main.verify_cmd(command_init);
 }
 
 fn run_add_file() !void {
+    assert(command_init != undefined);
+    assert(file_subpath != undefined);
+
     try cli_main.add_file_cmd(command_init, file_subpath);
 }
