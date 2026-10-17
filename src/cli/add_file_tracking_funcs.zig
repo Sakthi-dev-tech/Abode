@@ -1,67 +1,71 @@
 const std = @import("std");
 const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
+const verify_funcs = @import("verify_command_funcs.zig");
 
-/// Register a file or directory as a sync root, or enable an existing root on this device.
-/// Intended flow from design_planning.excalidraw; the steps below are not implemented yet.
+/// Capture a file or directory in the local source repo, following chezmoi's model.
+/// Intended flow from design_planning.excalidraw; copying and registration are not implemented yet.
 pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void {
     const io = init.io;
     const dir = std.Io.Dir;
 
-    // 1. Resolve sub_dir_path against the current working directory (or accept an
-    // absolute path). Verify setup and require an existing, readable file or directory.
-    // Expand a leading ~/ using this device's home directory, without shell expansion.
-    // Reject paths inside Abode's own storage; define a symlink policy before supporting links.
+    // 1. Verify setup. Resolve a relative or absolute path; expand a leading ~/
+    // directly using this device's home, without shell expansion. Require an
+    // existing, readable file or directory. Reject symlinks (including parent
+    // components) initially, and reject Abode's own config and storage trees.
+    const is_verified = verify_funcs.verify_setup(init);
+    if (!is_verified) {
+        return error.VerificationFailed;
+    }
+
     const current_working_dir = dir.cwd();
 
-    const file_path = try current_working_dir.realPathFileAlloc(
-        io,
-        sub_dir_path,
-        init.arena.allocator()
-        );
+    const file_path = try current_working_dir.realPathFileAlloc(io, sub_dir_path, init.arena.allocator());
     std.debug.print("Current add file path: {s}\n", .{file_path});
 
-    // 2. Derive the shared fallback_path relative to home, storing ~/ literally.
-    // For a source outside home, ask for a portable ~/ fallback and keep the actual
-    // source path as a device-only destination override in config.toml.
-    // Do not publish this device's resolved absolute paths in shared metadata.
+    // 2. Derive the destination-relative path from this device's home directory.
+    // Check containment by path components, not a string prefix. Initially accept
+    // only descendants of home; reject home itself and outside-home paths.
+    // No shared absolute paths, generated root IDs or fallback-path metadata.
+    const os_home_dir = home_dir_funcs.get_home_dir();
+    var path_iterator = std.mem.splitScalar(u8, file_path, '/');
 
-    // 3. Read existing roots' metadata and this device's config.toml mappings.
-    // Root identity is the full stable ID, not its display name or path alone.
-    // Resolve mappings using destination override first, then shared fallback_path.
-    // Detect duplicate destinations and overlapping roots before registering a root;
-    // reject ../ escapes and case collisions in managed relative paths.
+    // 3. Encode that relative path into the source tree using chezmoi-style names.
+    // Example: ~/.config/nvim/init.lua -> repo/dot_config/nvim/init.lua;
+    // ~/.zshrc -> repo/dot_zshrc. Encode each component, not just the basename.
+    // Use one reversible encoder/decoder with canonical attribute ordering and
+    // escaping for literal names that resemble reserved prefixes or suffixes.
+    // Preserve private/executable attributes in names (private_, executable_);
+    // Use empty_ for empty files. Empty-directory tracking is deferred because
+    // Git does not retain empty directories; do not add per-root metadata for it.
+    // Validate decoded paths, case collisions and file/directory conflicts.
 
-    // 4. If the selection matches an existing root, reuse its ID and repo folder.
-    // If already enabled at this destination, adding it again is a no-op.
-    // Otherwise enable it under [roots."<full-id>"] in config.toml, saving a
-    // destination override only when needed. Do not create duplicate shared metadata.
-    // Compare existing local contents with the repo before the first application.
-    // If they differ, require a choice of local, remote, or reconciled contents;
-    // preserve the actual files until that choice is safely applied by sync.
+    // 4. Use ~/.local/share/abode/repo/ as the managed Git source directory.
+    // Init/verify currently use ~/.local/share/abode/roots/; align those commands
+    // with repo/ before implementing capture. There are no per-root content/
+    // wrappers: source paths themselves identify the managed destinations.
+    // Re-adding refreshes the same source entry from the selected local contents.
+    // Adding a parent/child shares the same tree; merge redundant selections.
+    // An unchanged re-add is a no-op. Reject aliases decoding to the same path.
+    // If attribute prefixes change, replace the old encoded entry safely.
 
-    // 5. For a new root, generate a full stable ID and a readable, stable folder
-    // name such as nvim--a81f39c2. The planned managed clone layout is
-    // ~/.local/share/abode/repo/roots/<generated-name>/{metadata.json, content/}.
-    // Init currently creates ~/.local/share/abode/roots/ directly; align storage
-    // setup with the planned repo/ layout when implementing this flow.
-    // Write metadata.json with format_version, id, kind, display_name and fallback_path.
-    // A file root also records content_entry (for example, kitty.conf).
-    // Directory children are identified initially by root ID + relative path;
-    // record attributes such as executable bits and empty directories in metadata.
+    // 5. Prepare a complete copy before replacing source entries; keep actual
+    // files in place. Recurse for directories, encoding child names and preserving
+    // original file bytes. Honor selection-relative ignores; exclude Abode's
+    // config/storage and nested .git entries. An unreadable or disappearing
+    // source is an error, not a deletion. Re-add does not prune absent children;
+    // deletion reconciliation belongs to sync and requires a recorded base.
 
-    // 6. Copy stable original bytes into content/; leave the source files in place.
-    // Directory: preserve child names and relative paths recursively.
-    // Single file: copy to content/<content_entry>.
-    // Honor root-relative ignores and exclude Abode storage and nested Git metadata.
-    // Keep content files free of metadata headers. An unreadable or disappearing
-    // source is an error, not a deletion to publish.
+    // 6. After capture succeeds, select the decoded home-relative path locally
+    // in ~/.config/abode/config.toml (for example .config/nvim or .zshrc).
+    // Store only remote settings and selected paths; no ID-to-destination map.
+    // On another device, discover entries by decoding the source tree, choose
+    // paths, and resolve them beneath that device's home. Compare existing files
+    // before first application; preserve them until differences are resolved.
+    // An interrupted add must not enable a partially copied selection.
 
-    // 7. Enable the new ID in ~/.config/abode/config.toml after preparing its copy
-    // and metadata successfully. Keep config and sync state outside the Git repo;
-    // an interrupted add must not leave an enabled, partially populated root.
-
-    // 8. Hand off to the normal sync cycle to commit, reconcile and publish.
-    // Adding alone must not overwrite local destinations or claim a successful sync.
-    // Record applied revisions/hashes in state.json only after successful sync;
-    // keep pending work locally when offline. Existing remote roots remain opt-in.
+    // 7. Hand off to the normal sync cycle to commit, reconcile and publish.
+    // Add only captures source contents; it does not apply or push them itself.
+    // Keep applied revisions/hashes and pending work outside the source repo in
+    // state.json, keyed by decoded relative path. Checkpoint only after success.
+    // Offline work stays local; new remote entries remain opt-in on each device.
 }

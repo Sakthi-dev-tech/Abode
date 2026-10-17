@@ -12,8 +12,8 @@ pub fn init_cmd(init: std.process.Init) !void {
 }
 
 /// This function will check integrity of the folders
-pub fn verify_cmd(init: std.process.Init) !void {
-    try verify_commands.verify_setup(init);
+pub fn verify_cmd(init: std.process.Init) bool {
+    return verify_commands.verify_setup(init);
 }
 
 /// This function will add the provided file to be tracked

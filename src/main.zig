@@ -85,7 +85,9 @@ fn run_init() !void {
 }
 
 fn run_verify() !void {
-    try cli_main.verify_cmd(command_init);
+    if (!cli_main.verify_cmd(command_init)) {
+        return error.VerificationFailed;
+    }
 }
 
 fn run_add_file() !void {
