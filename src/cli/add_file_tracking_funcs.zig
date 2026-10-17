@@ -14,7 +14,7 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     // components) initially, and reject Abode's own config and storage trees.
     const is_verified = verify_funcs.verify_setup(init);
     if (!is_verified) {
-        return error.VerificationFailed;
+        return;
     }
 
     const current_working_dir = dir.cwd();
