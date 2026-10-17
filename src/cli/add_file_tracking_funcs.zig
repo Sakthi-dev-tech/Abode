@@ -1,5 +1,5 @@
 const std = @import("std");
-const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
+const get_paths_funcs = @import("../utils/get_paths_utils.zig");
 const verify_funcs = @import("verify_command_funcs.zig");
 
 /// Capture a file or directory in the local source repo, following chezmoi's model.

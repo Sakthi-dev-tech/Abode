@@ -1,5 +1,5 @@
 const std = @import("std");
-const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
+const get_paths_funcs = @import("../utils/get_paths_utils.zig");
 
 /// Verify the structure created by init without changing files or checking sync contents.
 pub fn verify_setup(init: std.process.Init) bool {
@@ -7,7 +7,7 @@ pub fn verify_setup(init: std.process.Init) bool {
     const green = "\x1b[32m";
     const reset = "\x1b[0m";
 
-    const home_dir = home_dir_funcs.get_home_dir(init) catch |err| {
+    const home_dir = get_paths_funcs.get_home_dir(init) catch |err| {
         std.debug.print("{s}Cannot resolve home directory: {s}{s}\n", .{ yellow, @errorName(err), reset });
         return false;
     };

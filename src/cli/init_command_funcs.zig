@@ -1,6 +1,6 @@
 const std = @import("std");
 const builtin = @import("builtin");
-const home_dir_funcs = @import("../utils/home_dir_resolve.zig");
+const get_paths_funcs = @import("../utils/get_paths_utils.zig");
 
 const dir = std.Io.Dir;
 
@@ -11,7 +11,7 @@ pub fn create_config_files(init: std.process.Init) !void {
     const allocator = init.arena.allocator();
 
     // Get the absolute path to the location of the config folder
-    const home_dir = try home_dir_funcs.get_home_dir(init);
+    const home_dir = try get_paths_funcs.get_home_dir(init);
     const absolute_path = try std.fs.path.join(
         allocator,
         &.{ home_dir, ".config", "abode" },
@@ -40,7 +40,7 @@ pub fn create_local_store_files(init: std.process.Init) !void {
     const allocator = init.gpa;
 
     // Get absolute path to the location of the local copy of my files to init the workspace
-    const workspace_dir = try home_dir_funcs.get_home_dir(init);
+    const workspace_dir = try get_paths_funcs.get_home_dir(init);
     const absolute_path = try std.fs.path.join(allocator, &.{ workspace_dir, ".local", "share", "abode" });
     defer allocator.free(absolute_path);
 

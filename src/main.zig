@@ -15,6 +15,8 @@ var command_init: std.process.Init = undefined;
 // Add command variables
 var file_subpath: []const u8 = undefined;
 
+var initialised_undefined: bool = false;
+
 pub fn main(init: std.process.Init) !void {
     command_init = init;
 
@@ -78,24 +80,26 @@ pub fn main(init: std.process.Init) !void {
             })
         } }) },
     }, .version = "0.1.0", .author = "ADormantSakthi" };
+
+    initialised_undefined = true;
     return r.run(&app);
 }
 
 fn run_init() !void {
-    assert(command_init != undefined);
+    assert(initialised_undefined != false);
 
     try cli_main.init_cmd(command_init);
 }
 
 fn run_verify() !void {
-    assert(command_init != undefined);
+    assert(initialised_undefined != false);
 
     _ = cli_main.verify_cmd(command_init);
 }
 
 fn run_add_file() !void {
-    assert(command_init != undefined);
-    assert(file_subpath != undefined);
+    assert(initialised_undefined != false);
+    assert(initialised_undefined != false);
 
     try cli_main.add_file_cmd(command_init, file_subpath);
 }
