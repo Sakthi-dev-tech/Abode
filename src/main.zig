@@ -95,7 +95,8 @@ fn run_init() !void {
 fn run_verify() !void {
     assert(initialised_undefined != false);
 
-    _ = cli_main.verify_cmd(command_init);
+    const verified = cli_main.verify_cmd(command_init);
+    if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ "\x1b[32m",  "\x1b[0m" });
 }
 
 fn run_add_file() !void {

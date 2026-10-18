@@ -4,7 +4,6 @@ const get_paths_funcs = @import("../utils/get_paths_utils.zig");
 /// Verify the structure created by init without changing files or checking sync contents.
 pub fn verify_setup(init: std.process.Init) bool {
     const yellow = "\x1b[33m";
-    const green = "\x1b[32m";
     const reset = "\x1b[0m";
 
     const home_dir = get_paths_funcs.get_home_dir(init) catch |err| {
@@ -45,6 +44,5 @@ pub fn verify_setup(init: std.process.Init) bool {
         return false;
     }
 
-    std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ green, reset });
     return valid;
 }
