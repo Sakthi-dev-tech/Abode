@@ -20,12 +20,13 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     const current_working_dir = dir.cwd();
 
     const file_path = try current_working_dir.realPathFileAlloc(io, sub_dir_path, init.arena.allocator());
-    std.debug.print("Current add file path: {s}\n", .{file_path});
 
     // 2. Derive the destination-relative path from this device's home directory.
     // Check containment by path components, not a string prefix. Initially accept
     // only descendants of home; reject home itself and outside-home paths.
     // No shared absolute paths, generated root IDs or fallback-path metadata.
+    const file_path_modified = try get_paths_funcs.get_universal_path(init, file_path);
+    std.debug.print("Current add file path: {s}\n", .{file_path_modified});
 
     // 3. Encode that relative path into the source tree using chezmoi-style names.
     // Example: ~/.config/nvim/init.lua -> repo/dot_config/nvim/init.lua;

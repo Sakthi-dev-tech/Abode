@@ -20,7 +20,7 @@ pub fn get_home_dir(init: std.process.Init) ![]const u8 {
         return error.InvalidHomeDirectory;
     }
 
-    return home;
+    return std.mem.trimEnd(u8, home, if (builtin.os.tag == .windows) "/\\" else "/");
 }
 
 /// Function returns the Dir for local workspace
@@ -44,8 +44,9 @@ pub fn get_local_workspace_dir(init: std.process.Init) !Dir {
 /// Function to expand path string by replacing ~ by the OS home directory
 /// @returns []const u8
 /// @throws {ExpectedHomeRelativePath} there is no ~ at the start of the path string
+/// @throws {InvalidHomeDirectory} home directory is invalid
 pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
-    const home = get_home_dir(init);
+    const home = try get_home_dir(init);
 
     if (!std.mem.startsWith(u8, path, "~/")) {
         return error.ExpectedHomeRelativePath;
@@ -55,5 +56,22 @@ pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
         return init.gpa.dupe(u8, home);
     }
 
-    return std.fs.path.join(init.gpa, &.{ home, path[2..] });
+    return std.fs.path.join(init.arena.allocator(), &.{ home, path[2..] });
+}
+
+/// Replace the home directory prefix with ~, leaving paths outside home unchanged.
+/// @returns []const u8
+pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8) ![]const u8 {
+    const home_dir_path = try get_home_dir(init);
+
+    if (!std.mem.startsWith(u8, expanded_file_path, home_dir_path)) {
+        return error.UnsupportedPath; // this path is not within the home directory of the OS
+    }
+
+    const suffix = expanded_file_path[home_dir_path.len + 1..];
+    if (suffix.len > 0 and std.fs.path.isSep(suffix[0])) {
+        return expanded_file_path;
+    }
+
+    return try std.mem.concat(init.arena.allocator(), u8, &.{ suffix });
 }
