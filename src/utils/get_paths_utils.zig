@@ -10,6 +10,18 @@ const key = switch (builtin.os.tag) {
     else => null,
 };
 
+/// Standerdise path seperators on all OS
+fn parse_path_separators(allocator: std.mem.Allocator, provided_path: []const u8) ![]const u8 {
+    const owned_path = try allocator.dupe(u8, provided_path);
+    for (owned_path) |*byte| {
+        if (std.fs.path.isSep(byte.*)) {
+            byte.* = '/';
+        }
+    }
+
+    return owned_path;
+}
+
 /// Function returns the String path to home directory for the current OS
 /// @returns []const u8
 /// @throws {UnsupportedPlatform} if not Windows, Linux, or MacOS
@@ -83,4 +95,9 @@ pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8
     }
 
     return try std.mem.concat(init.arena.allocator(), u8, &.{suffix});
+}
+
+/// Convert universal path into Abode compatible path
+pub fn parse_universal_path_into_abode_path(universal_path: []const u8) ![]const u8 {
+    assert(universal_path.len > 0);
 }
