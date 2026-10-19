@@ -89,6 +89,9 @@ pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
 /// Replace the home directory prefix with ~, leaving paths outside home unchanged.
 ///
 /// @returns []const u8
+///
+/// @throws {UnsupportedPath} if path is invalid
+/// @throws {OutOfMemory} if concat fails due to insufficient memory
 pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8) ![]const u8 {
     const home_dir_path = try get_home_dir(init);
     const allocator = init.arena.allocator();
@@ -152,10 +155,6 @@ pub fn parse_universal_path_into_abode_path(allocator: std.mem.Allocator, univer
 
     return try result.toOwnedSlice(allocator);
 }
-
-// ======================================================================================
-// TESTS
-// ======================================================================================
 
 test "Check if .config gets parsed for Adobe repo" {
     const allocator = std.testing.allocator;
