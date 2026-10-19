@@ -129,21 +129,35 @@ pub fn parse_universal_path_into_abode_path(allocator: std.mem.Allocator, univer
     assert(universal_path.len > 0);
 
     const parsed_path = try parse_path_separators(allocator, universal_path);
+    defer allocator.free(parsed_path);
+
+    var result: std.ArrayList(u8) = .empty;
+    defer result.deinit(allocator);
+
     var iterator = std.mem.splitScalar(u8, parsed_path, '/');
+    var first: bool = true;
 
     // iterate over the path chunks
     while (iterator.next()) |chunk| {
-        std.debug.print("{s}\n", .{chunk});
+        if (!first) try result.append(allocator, '/');
+        first = false;
+
+        if (std.mem.startsWith(u8, chunk, ".")) {
+            try result.appendSlice(allocator, "dot_");
+            try result.appendSlice(allocator, chunk[1..]);
+        } else {
+            try result.appendSlice(allocator, chunk);
+        }
     }
 
-    return parsed_path;
+    return try result.toOwnedSlice(allocator);
 }
 
 // ======================================================================================
 // TESTS
 // ======================================================================================
 
-test "parse path separators" {
+test "Check if .config gets parsed for Adobe repo" {
     const allocator = std.testing.allocator;
 
     const result = try parse_universal_path_into_abode_path(
@@ -152,5 +166,5 @@ test "parse path separators" {
     );
     defer allocator.free(result);
 
-    std.debug.print("\nParsed path: {s}\n", .{result});
+    try std.testing.expectEqualStrings("dot_config/nvim/init.lua", result);
 }
