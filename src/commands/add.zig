@@ -1,5 +1,5 @@
 const std = @import("std");
-const get_paths_funcs = @import("../utils/get_paths_utils.zig");
+const get_paths_funcs = @import("../utils/get_paths.zig");
 const verify_funcs = @import("verify.zig");
 
 /// Capture a file or directory in the local source repo, following chezmoi's model.
@@ -17,7 +17,6 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     if (!is_verified) {
         return;
     }
-    allocator.free(is_verified);
 
     const current_working_dir = dir.cwd();
 

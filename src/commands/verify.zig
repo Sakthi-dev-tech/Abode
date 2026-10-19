@@ -1,5 +1,5 @@
 const std = @import("std");
-const get_paths_funcs = @import("../utils/get_paths_utils.zig");
+const get_paths_funcs = @import("../utils/get_paths.zig");
 
 /// Verify the structure created by init without changing files or checking sync contents.
 pub fn verify_setup(init: std.process.Init) bool {

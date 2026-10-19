@@ -1,6 +1,6 @@
 const std = @import("std");
 const builtin = @import("builtin");
-const get_paths_funcs = @import("../utils/get_paths_utils.zig");
+const get_paths_funcs = @import("../utils/get_paths.zig");
 
 const dir = std.Io.Dir;
 
