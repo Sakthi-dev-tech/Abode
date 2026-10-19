@@ -3,7 +3,9 @@ const cli = @import("cli");
 const assert = std.debug.assert;
 
 const Abode = @import("Abode");
-const cli_funcs = @import("cli/main.zig");
+const add_funcs = @import("commands/add.zig");
+const init_funcs = @import("commands/init.zig");
+const verify_funcs = @import("commands/verify.zig");
 
 var config = struct {
     host: []const u8 = "localhost",
@@ -89,18 +91,19 @@ pub fn main(init: std.process.Init) !void {
 fn run_init() !void {
     assert(initialised_undefined != false);
 
-    try cli_funcs.init_cmd(command_init);
+    try init_funcs.create_config_files(command_init);
+    try init_funcs.create_local_store_files(command_init);
 }
 
 fn run_verify() !void {
     assert(initialised_undefined != false);
 
-    const verified = cli_funcs.verify_cmd(command_init);
+    const verified = verify_funcs.verify_setup(command_init);
     if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ "\x1b[32m",  "\x1b[0m" });
 }
 
 fn run_add_file() !void {
     assert(initialised_undefined != false);
 
-    try cli_funcs.add_file_cmd(command_init, file_subpath);
+    try add_funcs.add_file_to_track(command_init, file_subpath);
 }

@@ -1,6 +1,6 @@
 const std = @import("std");
 const get_paths_funcs = @import("../utils/get_paths_utils.zig");
-const verify_funcs = @import("verify_command_funcs.zig");
+const verify_funcs = @import("verify.zig");
 
 /// Capture a file or directory in the local source repo, following chezmoi's model.
 /// Intended flow from design_planning.excalidraw; copying and registration are not implemented yet.
