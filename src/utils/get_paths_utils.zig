@@ -1,12 +1,13 @@
 const std = @import("std");
 const builtin = @import("builtin");
+const assert = std.debug.assert;
 
 const Dir = std.Io.Dir;
 
 const key = switch (builtin.os.tag) {
     .windows => "USERPROFILE",
     .linux, .macos => "HOME",
-    else => null
+    else => null,
 };
 
 /// Function returns the String path to home directory for the current OS
@@ -51,7 +52,7 @@ pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
     if (!std.mem.startsWith(u8, path, "~/")) {
         return error.ExpectedHomeRelativePath;
     }
-    
+
     if (std.mem.eql(u8, path, "~")) {
         return init.gpa.dupe(u8, home);
     }
@@ -68,10 +69,18 @@ pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8
         return error.UnsupportedPath; // this path is not within the home directory of the OS
     }
 
-    const suffix = expanded_file_path[home_dir_path.len + 1..];
+    if (expanded_file_path.len < home_dir_path.len) {
+        return error.UnsupportedPath; // the expanded file path is shorter than the home path
+    }
+
+    if (!std.fs.path.isSep(expanded_file_path[home_dir_path.len])) {
+        return error.UnsupportedPath; // there is no separator right after the home address
+    }
+
+    const suffix = expanded_file_path[home_dir_path.len + 1 ..];
     if (suffix.len > 0 and std.fs.path.isSep(suffix[0])) {
         return expanded_file_path;
     }
 
-    return try std.mem.concat(init.arena.allocator(), u8, &.{ suffix });
+    return try std.mem.concat(init.arena.allocator(), u8, &.{suffix});
 }
