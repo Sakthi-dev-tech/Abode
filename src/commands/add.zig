@@ -1,5 +1,6 @@
 const std = @import("std");
-const get_paths_funcs = @import("../utils/get_paths.zig");
+const get_path_funcs = @import("../utils/get_paths.zig");
+const get_dir_funcs = @import("../utils/get_dirs.zig");
 const verify_funcs = @import("verify.zig");
 
 /// Capture a file or directory in the local source repo, following chezmoi's model.
@@ -27,7 +28,7 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     // Check containment by path components, not a string prefix. Initially accept
     // only descendants of home; reject home itself and outside-home paths.
     // No shared absolute paths, generated root IDs or fallback-path metadata.
-    const file_path_modified = try get_paths_funcs.get_universal_path(init, file_path);
+    const file_path_modified = try get_path_funcs.get_universal_path(init, file_path);
 
     // 3. Encode that relative path into the source tree using chezmoi-style names.
     // Example: ~/.config/nvim/init.lua -> repo/dot_config/nvim/init.lua;
@@ -38,13 +39,13 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     // Use empty_ for empty files. Empty-directory tracking is deferred because
     // Git does not retain empty directories; do not add per-root metadata for it.
     // Validate decoded paths, case collisions and file/directory conflicts.
-    const abode_file_path = try get_paths_funcs.parse_universal_path_into_abode_path(allocator, file_path_modified);
+    const file_in_abode_path = try get_path_funcs.parse_universal_path_into_abode_path(allocator, file_path_modified);
     defer {
         allocator.free(file_path_modified);
-        allocator.free(abode_file_path);
+        allocator.free(file_in_abode_path);
     }
 
-    std.debug.print("Current add file path: {s}\n", .{abode_file_path});
+    std.debug.print("Current add file path: {s}\n", .{file_in_abode_path});
 
     // 4. Use ~/.local/share/abode/repo/ as the managed Git source directory.
     // Init/verify currently use ~/.local/share/abode/roots/; align those commands
@@ -54,6 +55,20 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     // Adding a parent/child shares the same tree; merge redundant selections.
     // An unchanged re-add is a no-op. Reject aliases decoding to the same path.
     // If attribute prefixes change, replace the old encoded entry safely.
+    const abode_dir = try get_dir_funcs.get_local_workspace_dir(init);
+    defer abode_dir.close(io);
+
+    try std.Io.Dir.copyFile(
+        current_working_dir,
+        sub_dir_path,
+        abode_dir,
+        file_in_abode_path,
+        io,
+        .{
+            .replace = true,
+            .make_path = true
+        }
+    );
 
     // 5. Prepare a complete copy before replacing source entries; keep actual
     // files in place. Recurse for directories, encoding child names and preserving
