@@ -16,7 +16,6 @@ pub fn verify_setup(init: std.process.Init) bool {
         .{ ".config/abode", std.Io.File.Kind.directory },
         .{ ".config/abode/config.toml", std.Io.File.Kind.file },
         .{ ".local/share/abode", std.Io.File.Kind.directory },
-        .{ ".local/share/abode/roots", std.Io.File.Kind.directory },
     };
 
     var valid = true;

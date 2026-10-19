@@ -51,10 +51,6 @@ pub fn create_local_store_files(init: std.process.Init) !void {
 
     const local_workspace_dir = try dir.openDirAbsolute(io, absolute_path, .{});
     defer local_workspace_dir.close(io);
-
-    local_workspace_dir.createDir(io, "roots", .default_dir) catch |err| {
-        try catch_error_while_creating(err, "Roots folder in local workspace folder already exists!\n");
-    };
 }
 
 /// Handle error during file/folder creation

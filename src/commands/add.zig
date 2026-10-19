@@ -7,6 +7,7 @@ const verify_funcs = @import("verify.zig");
 pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void {
     const io = init.io;
     const dir = std.Io.Dir;
+    const allocator = init.arena.allocator();
 
     // 1. Verify setup. Resolve a relative or absolute path; expand a leading ~/
     // directly using this device's home, without shell expansion. Require an
@@ -16,17 +17,18 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     if (!is_verified) {
         return;
     }
+    allocator.free(is_verified);
 
     const current_working_dir = dir.cwd();
 
     const file_path = try current_working_dir.realPathFileAlloc(io, sub_dir_path, init.arena.allocator());
+    defer allocator.free(file_path);
 
     // 2. Derive the destination-relative path from this device's home directory.
     // Check containment by path components, not a string prefix. Initially accept
     // only descendants of home; reject home itself and outside-home paths.
     // No shared absolute paths, generated root IDs or fallback-path metadata.
     const file_path_modified = try get_paths_funcs.get_universal_path(init, file_path);
-    std.debug.print("Current add file path: {s}\n", .{file_path_modified});
 
     // 3. Encode that relative path into the source tree using chezmoi-style names.
     // Example: ~/.config/nvim/init.lua -> repo/dot_config/nvim/init.lua;
@@ -37,6 +39,13 @@ pub fn add_file_to_track(init: std.process.Init, sub_dir_path: []const u8) !void
     // Use empty_ for empty files. Empty-directory tracking is deferred because
     // Git does not retain empty directories; do not add per-root metadata for it.
     // Validate decoded paths, case collisions and file/directory conflicts.
+    const abode_file_path = try get_paths_funcs.parse_universal_path_into_abode_path(allocator, file_path_modified);
+    defer {
+        allocator.free(file_path_modified);
+        allocator.free(abode_file_path);
+    }
+
+    std.debug.print("Current add file path: {s}\n", .{abode_file_path});
 
     // 4. Use ~/.local/share/abode/repo/ as the managed Git source directory.
     // Init/verify currently use ~/.local/share/abode/roots/; align those commands
