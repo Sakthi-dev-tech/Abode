@@ -3,6 +3,8 @@ const get_paths_funcs = @import("../utils/get_paths_utils.zig");
 
 /// Verify the structure created by init without changing files or checking sync contents.
 pub fn verify_setup(init: std.process.Init) bool {
+    const allocator = init.arena.allocator();
+
     const yellow = "\x1b[33m";
     const reset = "\x1b[0m";
 
@@ -19,11 +21,11 @@ pub fn verify_setup(init: std.process.Init) bool {
 
     var valid = true;
     for (required_paths) |required| {
-        const path = std.fs.path.join(init.gpa, &.{ home_dir, required[0] }) catch |err| {
+        const path = std.fs.path.join(allocator, &.{ home_dir, required[0] }) catch |err| {
             std.debug.print("{s}Cannot construct setup path for {s}: {s}{s}\n", .{ yellow, required[0], @errorName(err), reset });
             return false;
         };
-        defer init.gpa.free(path);
+        defer allocator.free(path); // We would not need this path once checked so we can free it immediately aft
 
         const stat = std.Io.Dir.cwd().statFile(init.io, path, .{}) catch |err| {
             std.debug.print("{s}Cannot verify {s}: {s}{s}\n", .{ yellow, path, @errorName(err), reset });

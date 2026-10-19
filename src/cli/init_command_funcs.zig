@@ -37,7 +37,7 @@ pub fn create_config_files(init: std.process.Init) !void {
 pub fn create_local_store_files(init: std.process.Init) !void {
     const io = init.io;
 
-    const allocator = init.gpa;
+    const allocator = init.arena.allocator();
 
     // Get absolute path to the location of the local copy of my files to init the workspace
     const workspace_dir = try get_paths_funcs.get_home_dir(init);
