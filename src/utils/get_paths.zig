@@ -30,7 +30,7 @@ fn parse_path_separators(allocator: std.mem.Allocator, provided_path: []const u8
 ///
 /// @throws {UnsupportedPlatform} if not Windows, Linux, or MacOS
 /// @throws {InvalidHomeDirectory} home directory is invalid
-pub fn get_home_dir(init: std.process.Init) ![]const u8 {
+pub fn get_home_dir_path(init: std.process.Init) ![]const u8 {
     const home = init.environ_map.get(key) orelse return error.InvalidHomeDirectory;
 
     if (home.len == 0 or !std.fs.path.isAbsolute(home)) {
@@ -38,26 +38,6 @@ pub fn get_home_dir(init: std.process.Init) ![]const u8 {
     }
 
     return std.mem.trimEnd(u8, home, if (builtin.os.tag == .windows) "/\\" else "/");
-}
-
-/// Function returns the Dir for local workspace
-///
-/// @returns Dir
-///
-/// @throws {InvalidHomeDirectory} home directory is invalid
-/// @throws {OpenError} if opening dir API failed
-pub fn get_local_workspace_dir(init: std.process.Init) !Dir {
-    const io = init.io;
-
-    const home = init.environ_map.get(key) orelse return error.InvalidHomeDirectory;
-
-    if (home.len == 0 or !std.fs.path.isAbsolute(home)) {
-        return error.InvalidHomeDirectory;
-    }
-
-    const home_dir = try Dir.openDirAbsolute(io, home, .{});
-
-    return try home_dir.openDir(io, ".local/share/abode");
 }
 
 /// Function to expand path string by replacing ~ by the OS home directory
@@ -69,7 +49,7 @@ pub fn get_local_workspace_dir(init: std.process.Init) !Dir {
 pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
     const allocator = init.arena.allocator();
 
-    const home_path = try get_home_dir(init);
+    const home_path = try get_home_dir_path(init);
     const parsed_home_path = try parse_path_separators(allocator, home_path);
 
     const parsed_path = parse_path_separators(allocator, path);
@@ -93,7 +73,7 @@ pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
 /// @throws {UnsupportedPath} if path is invalid
 /// @throws {OutOfMemory} if concat fails due to insufficient memory
 pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8) ![]const u8 {
-    const home_dir_path = try get_home_dir(init);
+    const home_dir_path = try get_home_dir_path(init);
     const allocator = init.arena.allocator();
 
     const parsed_home_dir_path = try parse_path_separators(allocator, home_dir_path);
@@ -167,3 +147,24 @@ test "Check if .config gets parsed for Adobe repo" {
 
     try std.testing.expectEqualStrings("dot_config/nvim/init.lua", result);
 }
+
+/// Function returns the Dir for local Abode folder
+///
+/// @returns Dir
+///
+/// @throws {InvalidHomeDirectory} home directory is invalid
+/// @throws {OpenError} if opening dir API failed
+pub fn get_local_workspace_dir(init: std.process.Init) !Dir {
+    const io = init.io;
+
+    const home = init.environ_map.get(key) orelse return error.InvalidHomeDirectory;
+
+    if (home.len == 0 or !std.fs.path.isAbsolute(home)) {
+        return error.InvalidHomeDirectory;
+    }
+
+    const home_dir = try Dir.openDirAbsolute(io, home, .{});
+
+    return try home_dir.openDir(io, ".local/share/abode");
+}
+

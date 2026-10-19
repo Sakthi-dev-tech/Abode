@@ -8,7 +8,7 @@ pub fn verify_setup(init: std.process.Init) bool {
     const yellow = "\x1b[33m";
     const reset = "\x1b[0m";
 
-    const home_dir = get_paths_funcs.get_home_dir(init) catch |err| {
+    const home_dir = get_paths_funcs.get_home_dir_path(init) catch |err| {
         std.debug.print("{s}Cannot resolve home directory: {s}{s}\n", .{ yellow, @errorName(err), reset });
         return false;
     };
