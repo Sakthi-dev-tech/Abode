@@ -4,7 +4,7 @@ const assert = std.debug.assert;
 
 const Abode = @import("Abode");
 const add_funcs = @import("commands/add.zig");
-const init_funcs = @import("commands/init.zig");
+const InitFunctions = @import("commands/init.zig").InitFunctions;
 const verify_funcs = @import("commands/verify.zig");
 
 var config = struct {
@@ -90,9 +90,10 @@ pub fn main(init: std.process.Init) !void {
 
 fn run_init() !void {
     assert(initialised_undefined != false);
+    const init_instance = InitFunctions{.init = command_init};
 
-    try init_funcs.create_config_files(command_init);
-    try init_funcs.create_local_store_files(command_init);
+    try init_instance.create_config_files();
+    try init_instance.create_local_store_files();
 }
 
 fn run_verify() !void {
