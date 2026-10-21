@@ -3,7 +3,7 @@ const cli = @import("cli");
 const assert = std.debug.assert;
 
 const Abode = @import("Abode");
-const add_funcs = @import("commands/add.zig");
+const AddFunctions = @import("commands/add.zig").AddFunctions;
 const InitFunctions = @import("commands/init.zig").InitFunctions;
 const VerifyFunctions = @import("commands/verify.zig").VerifyFunctions;
 
@@ -110,6 +110,9 @@ fn run_verify() !void {
 
 fn run_add_file() !void {
     assert(initialised_undefined != false);
+    const add_instance = AddFunctions {
+        .init = command_init
+    };
 
-    try add_funcs.add_file_to_track(command_init, file_subpath);
+    try add_instance.add_file_to_track(command_init, file_subpath);
 }
