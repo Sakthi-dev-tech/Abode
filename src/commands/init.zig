@@ -8,7 +8,7 @@ pub const InitFunctions = struct {
     init: std.process.Init,
           
     /// Create all required config files for Abode
-    pub fn create_config_files(self: InitFunctions) !void {
+    pub fn create_config_files(self: *const InitFunctions) !void {
         const init = self.init;
 
         const io = init.io;
@@ -39,7 +39,7 @@ pub const InitFunctions = struct {
 
     /// Create required folders for storing local copy of sync files
     /// This will become a git repository connected to the user's remote repository
-    pub fn create_local_store_files(self: InitFunctions) !void {
+    pub fn create_local_store_files(self: *const InitFunctions) !void {
         const init = self.init;
 
         const io = init.io;
