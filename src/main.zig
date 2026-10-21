@@ -5,7 +5,7 @@ const assert = std.debug.assert;
 const Abode = @import("Abode");
 const add_funcs = @import("commands/add.zig");
 const InitFunctions = @import("commands/init.zig").InitFunctions;
-const verify_funcs = @import("commands/verify.zig");
+const VerifyFunctions = @import("commands/verify.zig").VerifyFunctions;
 
 var config = struct {
     host: []const u8 = "localhost",
@@ -90,7 +90,9 @@ pub fn main(init: std.process.Init) !void {
 
 fn run_init() !void {
     assert(initialised_undefined != false);
-    const init_instance = InitFunctions{.init = command_init};
+    const init_instance = InitFunctions {
+        .init = command_init
+    };
 
     try init_instance.create_config_files();
     try init_instance.create_local_store_files();
@@ -98,8 +100,11 @@ fn run_init() !void {
 
 fn run_verify() !void {
     assert(initialised_undefined != false);
+    const verify_instance = VerifyFunctions {
+        .init = command_init
+    };
 
-    const verified = verify_funcs.verify_setup(command_init);
+    const verified = verify_instance.verify_setup(command_init);
     if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ "\x1b[32m",  "\x1b[0m" });
 }
 
