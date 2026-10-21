@@ -1,7 +1,7 @@
 const std = @import("std");
 const get_path_funcs = @import("../utils/get_paths.zig");
 const get_dir_funcs = @import("../utils/get_dirs.zig");
-const verify_funcs = @import("verify.zig");
+const VerifyFunctions = @import("verify.zig").VerifyFunctions;
 
 pub const AddFunctions = struct {
     init: std.process.Init,
@@ -10,6 +10,7 @@ pub const AddFunctions = struct {
     /// Intended flow from design_planning.excalidraw; copying and registration are not implemented yet.
     pub fn add_file_to_track(self: *const AddFunctions, sub_dir_path: []const u8) !void {
         const init = self.init;
+        const verify_instance = VerifyFunctions{ .init = init };
 
         const io = init.io;
         const dir = std.Io.Dir;
@@ -19,7 +20,7 @@ pub const AddFunctions = struct {
         // directly using this device's home, without shell expansion. Require an
         // existing, readable file or directory. Reject symlinks (including parent
         // components) initially, and reject Abode's own config and storage trees.
-        const is_verified = verify_funcs.verify_setup(init);
+        const is_verified = verify_instance.verify_setup();
         if (!is_verified) {
             return;
         }

@@ -104,7 +104,7 @@ fn run_verify() !void {
         .init = command_init
     };
 
-    const verified = verify_instance.verify_setup(command_init);
+    const verified = verify_instance.verify_setup();
     if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ "\x1b[32m",  "\x1b[0m" });
 }
 
@@ -114,5 +114,5 @@ fn run_add_file() !void {
         .init = command_init
     };
 
-    try add_instance.add_file_to_track(command_init, file_subpath);
+    try add_instance.add_file_to_track(file_subpath);
 }
