@@ -1,4 +1,5 @@
 const std = @import("std");
+const constants = @import("constants.zig");
 const cli = @import("cli");
 const assert = std.debug.assert;
 
@@ -105,7 +106,7 @@ fn run_verify() !void {
     };
 
     const verified = verify_instance.verify_setup();
-    if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ "\x1b[32m",  "\x1b[0m" });
+    if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ constants.green_code,  constants.reset_code });
 }
 
 fn run_add_file() !void {
