@@ -1,6 +1,7 @@
 const std = @import("std");
-const constants = @import("constants.zig");
 const cli = @import("cli");
+const constants = @import("constants.zig");
+
 const assert = std.debug.assert;
 
 const Abode = @import("Abode");
