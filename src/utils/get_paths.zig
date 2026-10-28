@@ -88,7 +88,7 @@ pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8
         return error.UnsupportedPath; // this path is not within the home directory of the OS
     }
 
-    if (parsed_expanded_path.len < parsed_home_dir_path.len) {
+    if (parsed_expanded_path.len <= parsed_home_dir_path.len) {
         return error.UnsupportedPath; // the expanded file path is shorter than the home path
     }
 

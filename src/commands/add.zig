@@ -61,7 +61,15 @@ pub const AddFunctions = struct {
         const abode_dir = try get_dir_funcs.get_local_workspace_dir(init);
         defer abode_dir.close(io);
 
-        try std.Io.Dir.copyFile(current_working_dir, sub_dir_path, abode_dir, file_in_abode_path, io, .{ .replace = true, .make_path = true });
+        try std.Io.Dir.copyFile(
+            current_working_dir,
+            sub_dir_path, abode_dir, 
+            file_in_abode_path,
+            io,
+            .{
+                .replace = true,
+                .make_path = true 
+            });
 
         // 5. Prepare a complete copy before replacing source entries; keep actual
         // files in place. Recurse for directories, encoding child names and preserving
