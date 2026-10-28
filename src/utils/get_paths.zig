@@ -128,6 +128,9 @@ pub fn parse_universal_path_into_abode_path(allocator: std.mem.Allocator, univer
         if (std.mem.startsWith(u8, chunk, ".")) {
             try result.appendSlice(allocator, "dot_");
             try result.appendSlice(allocator, chunk[1..]);
+        } else if (std.mem.startsWith(u8, chunk, "dot_")) {
+            try result.appendSlice(allocator, "literal_");
+            try result.appendSlice(allocator, chunk[0..]);
         } else {
             try result.appendSlice(allocator, chunk);
         }
