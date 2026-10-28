@@ -3,6 +3,20 @@ const get_path_funcs = @import("../utils/get_paths.zig");
 const get_dir_funcs = @import("../utils/get_dirs.zig");
 const VerifyFunctions = @import("verify.zig").VerifyFunctions;
 
+/// Returns true if the pathk in the directory is a file
+fn isFile(io: std.Io, dir: std.Io.Dir, sub_path: []const u8) bool {
+    const stat = dir.statFile(io, sub_path, .{}) catch return false;
+
+    return stat.kind == .file;
+}
+
+/// Returns true if the path in the directory is a dir
+fn isFolder(io: std.Io, dir: std.Io.Dir, sub_path: []const u8) bool {
+    const stat = dir.statFile(io, sub_path, .{}) catch return false;
+
+    return stat.kind == .directory;
+}
+
 pub const AddFunctions = struct {
     init: std.process.Init,
 
@@ -51,8 +65,6 @@ pub const AddFunctions = struct {
             allocator.free(file_in_abode_path);
         }
 
-        std.debug.print("Current add file path: {s}\n", .{file_in_abode_path});
-
         // 4. Use ~/.local/share/abode/ as the managed Git source directory.
         // Re-adding refreshes the same source entry from the selected local contents.
         // Adding a parent/child shares the same tree; merge redundant selections.
@@ -61,22 +73,27 @@ pub const AddFunctions = struct {
         const abode_dir = try get_dir_funcs.get_local_workspace_dir(init);
         defer abode_dir.close(io);
 
-        try std.Io.Dir.copyFile(
-            current_working_dir,
-            sub_dir_path, abode_dir, 
-            file_in_abode_path,
-            io,
-            .{
-                .replace = true,
-                .make_path = true 
-            });
-
         // 5. Prepare a complete copy before replacing source entries; keep actual
         // files in place. Recurse for directories, encoding child names and preserving
         // original file bytes. Honor selection-relative ignores; exclude Abode's
         // config/storage and nested .git entries. An unreadable or disappearing
         // source is an error, not a deletion. Re-add does not prune absent children;
         // deletion reconciliation belongs to sync and requires a recorded base.
+
+        if (isFile(io, current_working_dir, sub_dir_path)) {
+            try std.Io.Dir.copyFile(
+                current_working_dir,
+                sub_dir_path,
+                abode_dir, 
+                file_in_abode_path,
+                io,
+                .{
+                    .replace = true,
+                    .make_path = true 
+                });
+        } else if (isFolder(io, current_working_dir, sub_dir_path)) {
+            return error.NotImplemented; // TODO: Copy folder recursively into the abode folder
+        }
 
         // 6. After capture succeeds, select the decoded home-relative path locally
         // in ~/.config/abode/config.toml (for example .config/nvim or .zshrc).
