@@ -108,7 +108,7 @@ pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8
 ///
 /// @returns Universal path converted into an Abode
 /// @example .config/nvim/init.lua => dot_config/nvim/init.lua
-pub fn parse_universal_path_into_abode_path(allocator: std.mem.Allocator, universal_path: []const u8) ![]const u8 {
+pub fn encode_universal_path_into_abode_path(allocator: std.mem.Allocator, universal_path: []const u8) ![]const u8 {
     assert(universal_path.len > 0);
 
     const parsed_path = try parse_path_separators(allocator, universal_path);
@@ -142,7 +142,7 @@ pub fn parse_universal_path_into_abode_path(allocator: std.mem.Allocator, univer
 test "Check if .config gets parsed for Adobe repo" {
     const allocator = std.testing.allocator;
 
-    const result = try parse_universal_path_into_abode_path(
+    const result = try encode_universal_path_into_abode_path(
         allocator,
         ".config/nvim/init.lua",
     );

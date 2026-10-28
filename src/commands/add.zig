@@ -59,7 +59,7 @@ pub const AddFunctions = struct {
         // Use empty_ for empty files. Empty-directory tracking is deferred because
         // Git does not retain empty directories; do not add per-root metadata for it.
         // Validate decoded paths, case collisions and file/directory conflicts.
-        const file_in_abode_path = try get_path_funcs.parse_universal_path_into_abode_path(allocator, file_path_modified);
+        const file_in_abode_path = try get_path_funcs.encode_universal_path_into_abode_path(allocator, file_path_modified);
         defer {
             allocator.free(file_path_modified);
             allocator.free(file_in_abode_path);
