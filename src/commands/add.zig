@@ -37,8 +37,8 @@ pub const AddFunctions = struct {
         const file_path_modified = try get_path_funcs.get_universal_path(init, file_path);
 
         // 3. Encode that relative path into the source tree using chezmoi-style names.
-        // Example: ~/.config/nvim/init.lua -> repo/dot_config/nvim/init.lua;
-        // ~/.zshrc -> repo/dot_zshrc. Encode each component, not just the basename.
+        // Example: ~/.config/nvim/init.lua -> dot_config/nvim/init.lua;
+        // ~/.zshrc -> dot_zshrc. Encode each component, not just the basename.
         // Use one reversible encoder/decoder with canonical attribute ordering and
         // escaping for literal names that resemble reserved prefixes or suffixes.
         // Preserve private/executable attributes in names (private_, executable_);
@@ -53,10 +53,7 @@ pub const AddFunctions = struct {
 
         std.debug.print("Current add file path: {s}\n", .{file_in_abode_path});
 
-        // 4. Use ~/.local/share/abode/repo/ as the managed Git source directory.
-        // Init/verify currently use ~/.local/share/abode/roots/; align those commands
-        // with repo/ before implementing capture. There are no per-root content/
-        // wrappers: source paths themselves identify the managed destinations.
+        // 4. Use ~/.local/share/abode/ as the managed Git source directory.
         // Re-adding refreshes the same source entry from the selected local contents.
         // Adding a parent/child shares the same tree; merge redundant selections.
         // An unchanged re-add is a no-op. Reject aliases decoding to the same path.
