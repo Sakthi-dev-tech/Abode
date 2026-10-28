@@ -81,7 +81,8 @@ pub const AddFunctions = struct {
         // 7. Hand off to the normal sync cycle to commit, reconcile and publish.
         // Add only captures source contents; it does not apply or push them itself.
         // Keep applied revisions/hashes and pending work outside the source repo in
-        // state.json, keyed by decoded relative path. Checkpoint only after success.
+        // ~/.local/state/abode/state.json, keyed by decoded relative path.
+        // Checkpoint only after success.
         // Offline work stays local; new remote entries remain opt-in on each device.
     }
 };

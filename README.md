@@ -8,7 +8,8 @@ these paths exist with the expected types:
 - `~/.config/abode/` (directory)
 - `~/.config/abode/config.toml` (regular file)
 - `~/.local/share/abode/` (directory)
-- `~/.local/share/abode/roots/` (directory)
+
+The managed Git source tree lives directly in `~/.local/share/abode/`.
 
 Verification prints yellow warnings for invalid or missing paths and a green
 message on success, then returns normally. Colour is disabled when output is
