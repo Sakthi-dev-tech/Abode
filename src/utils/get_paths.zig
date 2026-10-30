@@ -46,9 +46,7 @@ pub fn get_home_dir_path(init: std.process.Init) ![]const u8 {
 ///
 /// @throws {ExpectedHomeRelativePath} there is no ~ at the start of the path string
 /// @throws {InvalidHomeDirectory} home directory is invalid
-pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
-    const allocator = init.arena.allocator();
-
+pub fn expand_home_path(init: std.process.Init, path: []const u8, allocator: std.mem.Allocator) ![]u8 {
     const home_path = try get_home_dir_path(init);
     const parsed_home_path = try parse_path_separators(allocator, home_path);
 
@@ -72,9 +70,8 @@ pub fn expand_home_path(init: std.process.Init, path: []const u8) ![]u8 {
 ///
 /// @throws {UnsupportedPath} if path is invalid
 /// @throws {OutOfMemory} if concat fails due to insufficient memory
-pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8) ![]const u8 {
+pub fn get_universal_path(init: std.process.Init, expanded_file_path: []const u8, allocator: std.mem.Allocator) ![]const u8 {
     const home_dir_path = try get_home_dir_path(init);
-    const allocator = init.arena.allocator();
 
     const parsed_home_dir_path = try parse_path_separators(allocator, home_dir_path);
     const parsed_expanded_path = try parse_path_separators(allocator, expanded_file_path);

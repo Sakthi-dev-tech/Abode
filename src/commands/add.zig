@@ -22,33 +22,32 @@ pub const AddFunctions = struct {
 
     /// Capture a file or directory in the local source repo, following chezmoi's model.
     /// Intended flow from design_planning.excalidraw; copying and registration are not implemented yet.
-    pub fn add_file_to_track(self: *const AddFunctions, sub_dir_path: []const u8) !void {
+    pub fn add_file_to_track(self: *const AddFunctions, sub_dir_path: []const u8, allocator: std.mem.Allocator) !void {
         const init = self.init;
         const verify_instance = VerifyFunctions{ .init = init };
 
         const io = init.io;
         const dir = std.Io.Dir;
-        const allocator = init.arena.allocator();
 
         // 1. Verify setup. Resolve a relative or absolute path; expand a leading ~/
         // directly using this device's home, without shell expansion. Require an
         // existing, readable file or directory. Reject symlinks (including parent
         // components) initially, and reject Abode's own config and storage trees.
-        const is_verified = verify_instance.verify_setup();
+        const is_verified = verify_instance.verify_setup(allocator);
         if (!is_verified) {
             return;
         }
 
         const current_working_dir = dir.cwd();
 
-        const file_path = try current_working_dir.realPathFileAlloc(io, sub_dir_path, init.arena.allocator());
+        const file_path = try current_working_dir.realPathFileAlloc(io, sub_dir_path, allocator);
         defer allocator.free(file_path);
 
         // 2. Derive the destination-relative path from this device's home directory.
         // Check containment by path components, not a string prefix. Initially accept
         // only descendants of home; reject home itself and outside-home paths.
         // No shared absolute paths, generated root IDs or fallback-path metadata.
-        const file_path_modified = try get_path_funcs.get_universal_path(init, file_path);
+        const file_path_modified = try get_path_funcs.get_universal_path(init, file_path, allocator);
 
         // 3. Encode that relative path into the source tree using chezmoi-style names.
         // Example: ~/.config/nvim/init.lua -> dot_config/nvim/init.lua;

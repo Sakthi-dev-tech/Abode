@@ -7,10 +7,8 @@ pub const VerifyFunctions = struct {
 
     /// Verify the structure created by init without changing files or checking sync contents.
     /// Will print statements when there are warnings only
-    pub fn verify_setup(self: *const VerifyFunctions) bool {
+    pub fn verify_setup(self: *const VerifyFunctions, allocator: std.mem.Allocator) bool {
         const init = self.init;
-
-        const allocator = init.arena.allocator();
 
         const home_dir = get_paths_funcs.get_home_dir_path(init) catch |err| {
             std.debug.print("{s}Cannot resolve home directory: {s}{s}\n", .{ constants.yellow_code, @errorName(err), constants.reset_code });

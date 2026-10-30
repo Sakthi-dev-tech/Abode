@@ -92,29 +92,32 @@ pub fn main(init: std.process.Init) !void {
 
 fn run_init() !void {
     assert(initialised_undefined != false);
+    const allocator = command_init.arena.allocator();
     const init_instance = InitFunctions {
         .init = command_init
     };
 
-    try init_instance.create_config_files();
-    try init_instance.create_local_store_files();
+    try init_instance.create_config_files(allocator);
+    try init_instance.create_local_store_files(allocator);
 }
 
 fn run_verify() !void {
     assert(initialised_undefined != false);
+    const allocator = command_init.arena.allocator();
     const verify_instance = VerifyFunctions {
         .init = command_init
     };
 
-    const verified = verify_instance.verify_setup();
+    const verified = verify_instance.verify_setup(allocator);
     if (verified) std.debug.print("{s}Abode setup verified successfully.{s}\n", .{ constants.green_code,  constants.reset_code });
 }
 
 fn run_add_file() !void {
     assert(initialised_undefined != false);
+    const allocator = command_init.arena.allocator();
     const add_instance = AddFunctions {
         .init = command_init
     };
 
-    try add_instance.add_file_to_track(file_subpath);
+    try add_instance.add_file_to_track(file_subpath, allocator);
 }
